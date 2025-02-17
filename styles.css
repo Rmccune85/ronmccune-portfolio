@@ -1,0 +1,174 @@
+/* 
+   Name: Ron McCune
+   Date: 02/16/2025
+   File: styles.css
+*/
+
+/* CSS Reset: Removes default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid #ddd; /* Adds a light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+/* Hover effect for images */
+img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: 0.3s ease-in-out;
+}
+
+/* Style the navigation */
+nav {
+    position: fixed; /* Keeps the nav bar at the top */
+    width: 100%;
+    background: #007bff;
+    padding: 10px 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    color: #fff; /* White text */
+    padding: 10px;
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent hover effect */
+}
+
+/* Style body text */
+body {
+    font-family: Arial, sans-serif; /* Set font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333;
+    padding: 20px;
+    padding-top: 60px; /* Prevent content from being hidden under the fixed nav */
+}
+
+     /* Style paragraphs */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+      /* Add a container for main content */
+main {
+    max-width: 800px;
+    margin: 20px auto; /* Centering with consistent spacing */
+    background: white;
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style header */
+header {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    width: 100%; 
+	
+}
+
+/* Style headings */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Style sections */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Style footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background: #222;
+    color: white; 
+    font-weight: bold;
+    font-size: 16px;
+}
+/* Style footer links */
+footer a {
+    color: red ;
+    text-decoration: none;
+    font-weight: bold;
+	transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+footer a:hover {
+   color: blue; /* Text turns blue on hover */
+    background: rgba(255, 255, 255, 0.2); /* Transparent white background on hover */
+    padding: 5px; /* Optional: Add padding for better effect */
+    border-radius: 5px; /* Rounded effect */
+}
+footer p {
+    color: white ;
+}
+
+
+/* Create a simple two-column layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+/* Custom class for highlighting important text */
+.highlight {
+    color: #ff6600;
+    font-weight: bold;
+    background-color: #ffffcc;
+    padding: 5px;
+}
+
+/* Add styling for buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
