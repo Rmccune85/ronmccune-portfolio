@@ -1,46 +1,37 @@
-let num1, num2;
+let num1, num2, correctAnswer;
 
-function generateQuestion() {
-    num1 = Math.floor(Math.random() * 10) + 1;
-    num2 = Math.floor(Math.random() * 10) + 1;
-    
-    document.getElementById("num1").innerText = num1;
-    document.getElementById("num2").innerText = num2;
+function generateProblem() {
+    num1 = Math.floor(Math.random() * 10);
+    num2 = Math.floor(Math.random() * 10);
+    correctAnswer = num1 + num2;
+    document.getElementById("problem").innerHTML = `
+        <div>${num1}</div>
+        <div>+</div>
+        <div>${num2}</div>
+        <hr style="width: 100px; margin: auto;">
+    `;
     document.getElementById("answer").value = "";
-    document.getElementById("result").innerText = "";
+    document.getElementById("message").innerHTML = "";
 }
 
 function checkAnswer() {
     let userAnswer = parseInt(document.getElementById("answer").value);
-    let correctAnswer = num1 + num2;
-
     if (userAnswer === correctAnswer) {
-        document.getElementById("result").innerText = "🎉 Correct!";
-        document.getElementById("result").style.color = "green";
-        launchFireworks();
+        document.getElementById("message").innerHTML = "Correct!";
+        triggerFireworks();
     } else {
-        document.getElementById("result").innerText = "❌ Wrong, try again!";
-        document.getElementById("result").style.color = "red";
+        document.getElementById("message").innerHTML = "Try Again!";
     }
 }
 
-function launchFireworks() {
-    for (let i = 0; i < 10; i++) {
-        setTimeout(() => {
-            let firework = document.createElement("div");
-            firework.className = "firework";
-            document.body.appendChild(firework);
-
-            let x = Math.random() * window.innerWidth;
-            let y = Math.random() * window.innerHeight;
-
-            firework.style.left = x + "px";
-            firework.style.top = y + "px";
-
-            setTimeout(() => firework.remove(), 1000);
-        }, i * 200);
-    }
+function triggerFireworks() {
+    let fireworks = document.getElementById("fireworks");
+    fireworks.style.display = "block";
+    
+    setTimeout(() => {
+        fireworks.style.display = "none";
+    }, 3000);
 }
 
-// Ensure the first question loads when the page opens
-document.addEventListener("DOMContentLoaded", generateQuestion);
+// Run on page load
+generateProblem();
