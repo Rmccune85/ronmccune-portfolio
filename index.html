@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <h1>Addition Game</h1>
-    <div id="problem"></div>
     
-    <input type="number" id="answer" placeholder="Enter answer">
-    <br>
-    <button onclick="checkAnswer()">Submit</button>
-    <button onclick="generateProblem()">New Question</button>
-    
-    <div id="message"></div>
-
-    <!-- Fireworks Effect -->
-    <div id="fireworks">
-        <img src="https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif" width="100%">
+    <div class="game-container">
+        <div id="question" class="question"></div>
+        <input type="number" id="answer" placeholder="Enter answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="generateQuestion()">New Question</button>
+        <p id="result"></p>
     </div>
 
+    <!-- Fireworks JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
