@@ -10,15 +10,20 @@
     <h1>Addition Game</h1>
     
     <div class="game-container">
-        <div id="question" class="question"></div>
-        <input type="number" id="answer" placeholder="Enter answer">
+        <div id="question-container">
+            <div id="num1" class="number"></div>
+            <div>+</div>
+            <div id="num2" class="number"></div>
+            <hr>
+            <input type="number" id="answer" placeholder="Enter answer">
+        </div>
         <button onclick="checkAnswer()">Submit</button>
         <button onclick="generateQuestion()">New Question</button>
         <p id="result"></p>
     </div>
 
-    <!-- Fireworks JS -->
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.umd.min.js"></script>
+    <canvas id="fireworks"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
