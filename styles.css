@@ -172,3 +172,67 @@ button {
 button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
+/* Card container for projects */
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 280px; /* Set a fixed width for each card */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    float: left;
+    margin-right: 20px; /* Space between cards */
+    margin-bottom: 20px; /* Add space below each card */
+}
+
+/* Hover effect for cards */
+.project-card:hover {
+    transform: translateY(-10px); /* Slightly lift the card on hover */
+}
+
+/* Card image styling */
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Card title */
+.project-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card description text */
+.project-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Style buttons inside cards */
+.project-card .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    display: inline-block;
+    margin-top: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.project-card .btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Clearfix for floated cards */
+.project-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
