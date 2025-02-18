@@ -1,22 +1,24 @@
-let num1, num2, correctAnswer;
+let num1, num2;
 
-function newQuestion() {
+function generateQuestion() {
     num1 = Math.floor(Math.random() * 10) + 1;
     num2 = Math.floor(Math.random() * 10) + 1;
-    correctAnswer = num1 + num2;
-    document.getElementById("question").innerText = `${num1} + ${num2} = ?`;
-    document.getElementById("feedback").innerText = "";
+    document.getElementById("num1").innerText = num1;
+    document.getElementById("num2").innerText = num2;
+    document.getElementById("result").innerText = "";
     document.getElementById("answer").value = "";
 }
 
 function checkAnswer() {
     let userAnswer = parseInt(document.getElementById("answer").value);
+    let correctAnswer = num1 + num2;
     if (userAnswer === correctAnswer) {
-        document.getElementById("feedback").innerText = "Correct!";
+        document.getElementById("result").innerText = "✅ Correct!";
+        document.getElementById("result").style.color = "green";
     } else {
-        document.getElementById("feedback").innerText = "Try again!";
+        document.getElementById("result").innerText = "❌ Wrong, try again!";
+        document.getElementById("result").style.color = "red";
     }
 }
 
-// Generate first question when page loads
-window.onload = newQuestion;
+generateQuestion(); // Initialize first question
