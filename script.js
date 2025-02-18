@@ -1,37 +1,57 @@
-let num1, num2, correctAnswer;
+let num1, num2;
 
-function generateProblem() {
+// Generate a New Question
+function generateQuestion() {
     num1 = Math.floor(Math.random() * 10);
     num2 = Math.floor(Math.random() * 10);
-    correctAnswer = num1 + num2;
-    document.getElementById("problem").innerHTML = `
-        <div>${num1}</div>
-        <div>+</div>
-        <div>${num2}</div>
-        <hr style="width: 100px; margin: auto;">
+    document.getElementById("question").innerHTML = `
+        <div class="math-problem">
+            <div>${num1}</div>
+            <div>+</div>
+            <div>${num2}</div>
+            <div>_____</div>
+        </div>
     `;
-    document.getElementById("answer").value = "";
-    document.getElementById("message").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
 }
 
+// Check Answer
 function checkAnswer() {
-    let userAnswer = parseInt(document.getElementById("answer").value);
-    if (userAnswer === correctAnswer) {
-        document.getElementById("message").innerHTML = "Correct!";
-        triggerFireworks();
+    let userAnswer = document.getElementById("answer").value;
+    if (userAnswer == (num1 + num2)) {
+        document.getElementById("result").innerHTML = "🎉 Correct!";
+        startFireworks(); // Show fireworks on correct answer
     } else {
-        document.getElementById("message").innerHTML = "Try Again!";
+        document.getElementById("result").innerHTML = "❌ Incorrect, try again!";
     }
 }
 
-function triggerFireworks() {
-    let fireworks = document.getElementById("fireworks");
-    fireworks.style.display = "block";
-    
+// Fireworks Effect
+function startFireworks() {
+    const container = document.body;
+    const fireworks = new Fireworks(container, {
+        autoresize: true,
+        opacity: 0.5,
+        acceleration: 1.05,
+        friction: 0.97,
+        gravity: 1.5,
+        particles: 100,
+        trace: 3,
+        explosion: 5,
+        intensity: 40,
+        flickering: 50,
+        lineStyle: 'round',
+        hue: { min: 0, max: 360 },
+        delay: { min: 30, max: 60 }
+    });
+
+    fireworks.start();
+
+    // Stop fireworks after 3 seconds
     setTimeout(() => {
-        fireworks.style.display = "none";
+        fireworks.stop();
     }, 3000);
 }
 
-// Run on page load
-generateProblem();
+// Load the first question when the page loads
+window.onload = generateQuestion;
