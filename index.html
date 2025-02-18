@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Addition Game</h1>
-    <p id="question">Loading...</p>
-    <input type="number" id="answer" placeholder="Your answer">
-    <button onclick="checkAnswer()">Submit</button>
-    <button onclick="newQuestion()">New Question</button>
-    <p id="feedback"></p>
+    <div class="game-container">
+        <h1>Addition Game</h1>
+        <div class="problem">
+            <span id="num1"></span> <br>
+            + <br>
+            <span id="num2"></span>
+            <hr>
+        </div>
+        <input type="number" id="answer" placeholder="Enter your answer">
+        <div class="buttons">
+            <button onclick="checkAnswer()">Submit</button>
+            <button onclick="generateQuestion()">New Question</button>
+        </div>
+        <p id="result"></p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
