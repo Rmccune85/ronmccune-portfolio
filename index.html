@@ -8,21 +8,22 @@
 </head>
 <body>
     <h1>Addition Game</h1>
+    
     <div class="game-container">
-        <div class="problem">
-            <span id="num1">?</span> <br>
-            <span>+</span> <br>
-            <span id="num2">?</span>
+        <div id="question-container">
+            <div id="num1" class="number"></div>
+            <div>+</div>
+            <div id="num2" class="number"></div>
             <hr>
+            <input type="number" id="answer" placeholder="Enter answer">
         </div>
-        <input type="text" id="answer" placeholder="Enter answer">
-        <div class="buttons">
-            <button onclick="checkAnswer()">Submit</button>
-            <button onclick="generateQuestion()">New Question</button>
-        </div>
-        <p id="message"></p>
-        <canvas id="fireworksCanvas"></canvas>
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="generateQuestion()">New Question</button>
+        <p id="result"></p>
     </div>
+
+    <canvas id="fireworks"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
