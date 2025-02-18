@@ -22,47 +22,65 @@ function checkAnswer() {
     }
 }
 
-// Fireworks Effect
+// Enhanced Fireworks Effect
 function startFireworks() {
     const canvas = document.getElementById("fireworks");
     const ctx = canvas.getContext("2d");
-    
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.style.display = "block";
 
     let particles = [];
-    for (let i = 0; i < 100; i++) {
-        particles.push({
-            x: canvas.width / 2,
-            y: canvas.height / 2,
-            radius: Math.random() * 4 + 1,
-            speedX: Math.random() * 10 - 5,
-            speedY: Math.random() * 10 - 5,
-            color: `hsl(${Math.random() * 360}, 100%, 50%)`
-        });
+    const colors = ["#ff0000", "#ff7300", "#ffeb00", "#00ff00", "#0099ff", "#9900ff"];
+
+    function createFirework(x, y) {
+        for (let i = 0; i < 50; i++) {
+            particles.push({
+                x: x,
+                y: y,
+                radius: Math.random() * 5 + 2,
+                speedX: (Math.random() - 0.5) * 8,
+                speedY: (Math.random() - 0.5) * 8,
+                color: colors[Math.floor(Math.random() * colors.length)],
+                life: 50 + Math.random() * 50
+            });
+        }
     }
 
-    function animate() {
+    function animateFireworks() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach((p, i) => {
+        particles.forEach((p, index) => {
             p.x += p.speedX;
             p.y += p.speedY;
+            p.life -= 1;
+            p.radius *= 0.98;
+
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
             ctx.fillStyle = p.color;
             ctx.fill();
+
+            if (p.life <= 0) {
+                particles.splice(index, 1);
+            }
         });
+
         if (particles.length > 0) {
-            requestAnimationFrame(animate);
+            requestAnimationFrame(animateFireworks);
+        } else {
+            canvas.style.display = "none";
         }
     }
 
-    animate();
+    // Fireworks at 3 random positions
+    for (let i = 0; i < 3; i++) {
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height * 0.5;
+        createFirework(x, y);
+    }
 
-    setTimeout(() => {
-        particles = [];
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }, 3000);
+    animateFireworks();
 }
 
 // Load the first question when the page loads
