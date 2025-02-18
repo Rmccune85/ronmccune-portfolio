@@ -22,7 +22,7 @@ function checkAnswer() {
     }
 }
 
-// Enhanced Fireworks Effect
+// 🚀 Final Fireworks Effect - Looks Like Real Fireworks!
 function startFireworks() {
     const canvas = document.getElementById("fireworks");
     const ctx = canvas.getContext("2d");
@@ -32,18 +32,19 @@ function startFireworks() {
     canvas.style.display = "block";
 
     let particles = [];
-    const colors = ["#ff0000", "#ff7300", "#ffeb00", "#00ff00", "#0099ff", "#9900ff"];
+    const colors = ["#FF0000", "#FFA500", "#FFFF00", "#00FF00", "#0000FF", "#FF00FF"];
 
-    function createFirework(x, y) {
-        for (let i = 0; i < 50; i++) {
+    function createExplosion(x, y) {
+        for (let i = 0; i < 80; i++) { // More particles for bigger explosion
             particles.push({
                 x: x,
                 y: y,
                 radius: Math.random() * 5 + 2,
-                speedX: (Math.random() - 0.5) * 8,
-                speedY: (Math.random() - 0.5) * 8,
+                speedX: (Math.random() - 0.5) * 12,
+                speedY: (Math.random() - 0.5) * 12,
                 color: colors[Math.floor(Math.random() * colors.length)],
-                life: 50 + Math.random() * 50
+                gravity: 0.2, // Gravity effect
+                life: 80 + Math.random() * 50
             });
         }
     }
@@ -53,6 +54,7 @@ function startFireworks() {
         particles.forEach((p, index) => {
             p.x += p.speedX;
             p.y += p.speedY;
+            p.speedY += p.gravity; // Gravity pulls particles down
             p.life -= 1;
             p.radius *= 0.98;
 
@@ -73,11 +75,11 @@ function startFireworks() {
         }
     }
 
-    // Fireworks at 3 random positions
-    for (let i = 0; i < 3; i++) {
+    // Launch 4 Fireworks at Different Positions
+    for (let i = 0; i < 4; i++) {
         let x = Math.random() * canvas.width;
-        let y = Math.random() * canvas.height * 0.5;
-        createFirework(x, y);
+        let y = Math.random() * canvas.height * 0.4;
+        createExplosion(x, y);
     }
 
     animateFireworks();
