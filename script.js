@@ -1,38 +1,38 @@
-// Fireworks effect using Fireworks.js
-const fireworksContainer = document.createElement("div");
-fireworksContainer.style.position = "fixed";
-fireworksContainer.style.top = "0";
-fireworksContainer.style.left = "0";
-fireworksContainer.style.width = "100vw";
-fireworksContainer.style.height = "100vh";
-fireworksContainer.style.pointerEvents = "none";
-document.body.appendChild(fireworksContainer);
-
-// Fireworks.js library setup
+// Fireworks effect setup
+const fireworksContainer = document.getElementById("fireworks-container");
 const fireworks = new Fireworks(fireworksContainer, {
-  maxRockets: 5, // Number of fireworks at a time
-  rocketSpawnInterval: 200, // How fast rockets launch (milliseconds)
-  numParticles: 100, // Number of particles per explosion
-  explosionMinHeight: 0.2, // Min explosion height (percentage of screen)
-  explosionMaxHeight: 0.9, // Max explosion height
-  explosionChance: 0.08, // Chance of a random explosion
+    maxRockets: 5, // Max simultaneous fireworks
+    rocketSpawnInterval: 200, // Rocket spawn speed
+    numParticles: 100, // Number of particles per explosion
+    explosionMinHeight: 0.2, // Minimum explosion height
+    explosionMaxHeight: 0.9, // Maximum explosion height
+    explosionChance: 0.08, // Random explosion chance
 });
 
-// Function to trigger fireworks when the answer is correct
-function triggerFireworks() {
-  fireworks.start();
-  setTimeout(() => {
-    fireworks.stop();
-  }, 3000); // Stop after 3 seconds
+let num1, num2, correctAnswer;
+
+function generateQuestion() {
+    num1 = Math.floor(Math.random() * 10) + 1;
+    num2 = Math.floor(Math.random() * 10) + 1;
+    correctAnswer = num1 + num2;
+    
+    document.getElementById("num1").textContent = num1;
+    document.getElementById("num2").textContent = num2;
+    document.getElementById("answer").value = "";
+    document.getElementById("result").textContent = "";
 }
 
-// Modify your existing checkAnswer function to trigger fireworks
 function checkAnswer() {
-  const userAnswer = parseInt(document.getElementById("answer").value);
-  if (userAnswer === correctAnswer) {
-    document.getElementById("result").textContent = "🎉 Correct!";
-    triggerFireworks();
-  } else {
-    document.getElementById("result").textContent = "❌ Try again!";
-  }
+    const userAnswer = parseInt(document.getElementById("answer").value);
+    
+    if (userAnswer === correctAnswer) {
+        document.getElementById("result").textContent = "🎉 Correct!";
+        fireworks.start();
+        setTimeout(() => fireworks.stop(), 3000); // Stop fireworks after 3 seconds
+    } else {
+        document.getElementById("result").textContent = "❌ Try again!";
+    }
 }
+
+// Generate the first question on page load
+generateQuestion();
