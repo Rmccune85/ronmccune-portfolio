@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addition Game</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.1/dist/index.umd.min.js"></script>
 </head>
 <body>
     <h1>Addition Game</h1>
     <div class="game-container">
-        <div id="question-container">
-            <span id="num1"></span> <br>
-            <span id="operator">+</span> <br>
-            <span id="num2"></span> <br>
+        <div class="problem">
+            <span id="num1">?</span> <br>
+            <span>+</span> <br>
+            <span id="num2">?</span>
             <hr>
-            <input type="number" id="answer" placeholder="Enter your answer">
         </div>
-        <div class="button-container">
+        <input type="text" id="answer" placeholder="Enter answer">
+        <div class="buttons">
             <button onclick="checkAnswer()">Submit</button>
             <button onclick="generateQuestion()">New Question</button>
         </div>
-        <p id="result"></p>
+        <p id="message"></p>
+        <canvas id="fireworksCanvas"></canvas>
     </div>
-    <div id="fireworks-container"></div>
     <script src="script.js"></script>
 </body>
 </html>
