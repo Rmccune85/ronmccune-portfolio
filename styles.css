@@ -23,6 +23,7 @@ header {
     color: white;
     padding: 30px 0;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .profile-image {
@@ -31,6 +32,11 @@ header {
     height: 120px;
     object-fit: cover;
     border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
 }
 
 /* Navigation */
@@ -40,9 +46,14 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
-    background-color: #f0f0f0;
+    background-color: #fff;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
@@ -74,6 +85,23 @@ main {
 .highlight-text {
     color: #007bff;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.project-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
 }
 
 /* Footer */
@@ -83,6 +111,7 @@ footer {
     background: #222;
     color: white;
     font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer a {
@@ -107,6 +136,14 @@ footer a:hover {
         width: 80px;
         height: 80px;
     }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
 }
 
 /* Tablet Styles */
@@ -117,6 +154,10 @@ footer a:hover {
 
     main {
         padding: 30px;
+    }
+
+    .project-card {
+        max-width: 45%;
     }
 }
 
@@ -134,5 +175,21 @@ footer a:hover {
 
     main {
         max-width: 1000px;
+    }
+
+    .project-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .project-card {
+        width: 30%;
+        max-width: 300px;
+    }
+
+    .project-card:hover {
+        transform: scale(1.1);
     }
 }
