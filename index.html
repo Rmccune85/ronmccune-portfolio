@@ -41,4 +41,49 @@
         <h2 class="highlight-text">Addition Game</h2>
         <div class="game-container">
             <div class="number" id="number1">0</div>
-            <div class="number" id="n
+            <div class="number" id="number2">0</div>
+            <input type="text" id="answer" placeholder="Enter answer">
+            <button id="submit">Check Answer</button>
+            <button id="newQuestion">New Question</button>
+        </div>
+        <canvas id="fireworks"></canvas>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section">
+        <h2 class="highlight-text">Calculator</h2>
+        <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button class="button" onclick="appendToDisplay('7')">7</button>
+                <button class="button" onclick="appendToDisplay('8')">8</button>
+                <button class="button" onclick="appendToDisplay('9')">9</button>
+                <button class="button" onclick="appendToDisplay('/')">/</button>
+                <button class="button" onclick="appendToDisplay('4')">4</button>
+                <button class="button" onclick="appendToDisplay('5')">5</button>
+                <button class="button" onclick="appendToDisplay('6')">6</button>
+                <button class="button" onclick="appendToDisplay('*')">*</button>
+                <button class="button" onclick="appendToDisplay('1')">1</button>
+                <button class="button" onclick="appendToDisplay('2')">2</button>
+                <button class="button" onclick="appendToDisplay('3')">3</button>
+                <button class="button" onclick="appendToDisplay('-')">-</button>
+                <button class="button" onclick="appendToDisplay('0')">0</button>
+                <button class="button" onclick="appendToDisplay('.')">.</button>
+                <button class="button" onclick="calculateResult()">=</button>
+                <button class="button" onclick="appendToDisplay('+')">+</button>
+                <button class="button" onclick="clearDisplay()">C</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add These Scripts -->
+    <script src="script-additiongame.js"></script>
+    <script src="script-calculator.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+    </footer>
+</body>
+</html>
