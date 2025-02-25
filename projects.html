@@ -20,7 +20,7 @@
 <body>
     <!-- Header Section -->
     <header>
-        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking">
+        <img class="profile-image" src="images/kayaking.jpg" alt="Ron McCune Kayaking">
         <h1>Ron McCune</h1>
         <h2>Passionate About IT & Cybersecurity</h2>
         <nav aria-label="Main Navigation">
@@ -35,55 +35,24 @@
     </header>
 
     <!-- Main Content Section -->
-    <section class="main-content">
-        <h2 class="highlight-text">Welcome to My Portfolio:</h2>
-        <p>Hi, I'm Ron McCune, an IT enthusiast with a passion for cybersecurity. This portfolio highlights my journey, skills, and future aspirations in the field.</p>
-        <p>Feel free to explore my work and reach out if you'd like to connect!</p>
-    </section>
+    <main class="project-section">
+        <h2 class="highlight-text">My Projects</h2>
+        <p>Here are some of the projects I've been working on during my journey in IT and Cybersecurity:</p>
 
-    <!-- Addition Game Section -->
-    <section class="game-section">
-        <h2 class="highlight-text">Addition Game</h2>
-        <div class="game-container">
-            <div class="number" id="number1">0</div>
-            <div class="number" id="number2">0</div>
-            <input type="text" id="answer" placeholder="Enter answer">
-            <button id="submit">Check Answer</button>
-            <button id="newQuestion">New Question</button>
+        <!-- Project 1: Addition Game -->
+        <div class="project-card">
+            <h3>Project 1: Addition Game</h3>
+            <img src="addition-game-screenshot.png" alt="Addition Game Screenshot">
+            <p>A fun and interactive addition game built using HTML, CSS, and JavaScript. It helps users practice their math skills in an engaging way.</p>
         </div>
-        <canvas id="fireworks"></canvas>
-    </section>
 
-    <!-- Calculator Section -->
-    <section class="calculator-section">
-        <h2 class="highlight-text">Calculator</h2>
-        <div class="calculator">
-            <div class="display" id="display">0</div>
-            <div class="buttons">
-                <button class="button" onclick="appendToDisplay('7')">7</button>
-                <button class="button" onclick="appendToDisplay('8')">8</button>
-                <button class="button" onclick="appendToDisplay('9')">9</button>
-                <button class="button" onclick="appendToDisplay('/')">/</button>
-                <button class="button" onclick="appendToDisplay('4')">4</button>
-                <button class="button" onclick="appendToDisplay('5')">5</button>
-                <button class="button" onclick="appendToDisplay('6')">6</button>
-                <button class="button" onclick="appendToDisplay('*')">*</button>
-                <button class="button" onclick="appendToDisplay('1')">1</button>
-                <button class="button" onclick="appendToDisplay('2')">2</button>
-                <button class="button" onclick="appendToDisplay('3')">3</button>
-                <button class="button" onclick="appendToDisplay('-')">-</button>
-                <button class="button" onclick="appendToDisplay('0')">0</button>
-                <button class="button" onclick="appendToDisplay('.')">.</button>
-                <button class="button" onclick="calculateResult()">=</button>
-                <button class="button" onclick="appendToDisplay('+')">+</button>
-                <button class="button" onclick="clearDisplay()">C</button>
-            </div>
+        <!-- Project 2: Calculator -->
+        <div class="project-card">
+            <h3>Project 2: Calculator</h3>
+            <img src="calculator.jpg" alt="Calculator Screenshot">
+            <p>A responsive calculator built using HTML, CSS, and JavaScript, allowing users to perform basic arithmetic operations easily.</p>
         </div>
-    </section>
-
-    <!-- Add These Scripts -->
-    <script src="script-additiongame.js"></script>
-    <script src="script-calculator.js"></script>
+    </main>
 
     <!-- Footer Section -->
     <footer>
@@ -92,4 +61,3 @@
     </footer>
 </body>
 </html>
-
