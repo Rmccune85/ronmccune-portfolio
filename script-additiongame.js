@@ -1,3 +1,5 @@
+// script-additiongame.js
+
 let num1, num2;
 
 // Generate a New Question
@@ -5,16 +7,25 @@ function generateQuestion() {
     num1 = Math.floor(Math.random() * 10) + 1;
     num2 = Math.floor(Math.random() * 10) + 1;
 
-    document.getElementById("num1").innerText = num1;
-    document.getElementById("num2").innerText = num2;
+    document.getElementById("number1").innerText = num1;
+    document.getElementById("number2").innerText = num2;
     document.getElementById("answer").value = "";
     document.getElementById("result").innerText = "";
+    document.getElementById("answer").focus();
 }
 
 // Check Answer
 function checkAnswer() {
-    let userAnswer = document.getElementById("answer").value;
-    if (userAnswer == (num1 + num2)) {
+    let userAnswer = document.getElementById("answer").value.trim();
+    
+    // Validate Input
+    if (userAnswer === "" || isNaN(userAnswer)) {
+        document.getElementById("result").innerText = "⚠️ Please enter a valid number!";
+        return;
+    }
+
+    // Check Answer
+    if (parseInt(userAnswer) === (num1 + num2)) {
         document.getElementById("result").innerText = "🎉 Correct!";
         startFireworks();
     } else {
@@ -22,7 +33,11 @@ function checkAnswer() {
     }
 }
 
-// 🚀 Final Fireworks Effect - Looks Like Real Fireworks!
+// Event Listeners
+document.getElementById("submit").addEventListener("click", checkAnswer);
+document.getElementById("newQuestion").addEventListener("click", generateQuestion);
+
+// 🚀 Final Fireworks Effect - Optimized for Performance
 function startFireworks() {
     const canvas = document.getElementById("fireworks");
     const ctx = canvas.getContext("2d");
@@ -35,7 +50,7 @@ function startFireworks() {
     const colors = ["#FF0000", "#FFA500", "#FFFF00", "#00FF00", "#0000FF", "#FF00FF"];
 
     function createExplosion(x, y) {
-        for (let i = 0; i < 80; i++) { // More particles for bigger explosion
+        for (let i = 0; i < 80; i++) {
             particles.push({
                 x: x,
                 y: y,
@@ -43,8 +58,8 @@ function startFireworks() {
                 speedX: (Math.random() - 0.5) * 12,
                 speedY: (Math.random() - 0.5) * 12,
                 color: colors[Math.floor(Math.random() * colors.length)],
-                gravity: 0.2, // Gravity effect
-                life: 80 + Math.random() * 50
+                gravity: 0.2,
+                life: 100 + Math.random() * 50
             });
         }
     }
@@ -54,8 +69,8 @@ function startFireworks() {
         particles.forEach((p, index) => {
             p.x += p.speedX;
             p.y += p.speedY;
-            p.speedY += p.gravity; // Gravity pulls particles down
-            p.life -= 1;
+            p.speedY += p.gravity;
+            p.life -= 2;
             p.radius *= 0.98;
 
             ctx.beginPath();
@@ -75,7 +90,7 @@ function startFireworks() {
         }
     }
 
-    // Launch 4 Fireworks at Different Positions
+    // Launch 4 Fireworks at Random Positions
     for (let i = 0; i < 4; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height * 0.4;

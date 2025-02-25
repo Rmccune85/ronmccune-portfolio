@@ -7,13 +7,14 @@
 
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
-    overflow-x: hidden;
     text-align: center;
     line-height: 1.6;
+    overflow-x: hidden;
+    margin: 0;
 }
 
 /* Header */
@@ -81,27 +82,11 @@ main {
     text-align: left;
 }
 
-/* Section Titles */
 .highlight-text {
     color: #007bff;
     font-weight: bold;
     text-align: center;
     margin-bottom: 15px;
-}
-
-/* Buttons */
-.project-link {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
 }
 
 /* Footer */
@@ -124,9 +109,105 @@ footer a:hover {
     color: #ff3b30;
 }
 
-/* Media Queries for Responsive Design */
+/* Addition Game Styles */
+.game-container {
+    background: white;
+    padding: 30px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
-/* Mobile Styles */
+.number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    font-size: 30px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Calculator Styles */
+.calculator {
+    background-color: #2D2D2D;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 80px);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.display {
+    grid-column: span 4;
+    background-color: #3C3C3C;
+    color: #FFF;
+    border-radius: 10px;
+    font-size: 36px;
+    text-align: right;
+    padding: 10px;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.button {
+    background-color: #4D4D4D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:active {
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button.zero {
+    grid-column: span 2;
+}
+
+.button.equal {
+    background-color: #FF9500;
+    color: white;
+}
+
+.button.equal:active {
+    background-color: #D67D00;
+}
+
+.button:hover {
+    background-color: #5C5C5C;
+}
+
+/* Media Queries for Responsive Design */
 @media only screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
@@ -144,52 +225,8 @@ footer a:hover {
     h2 {
         font-size: 20px;
     }
-}
 
-/* Tablet Styles */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
-        justify-content: space-around;
-    }
-
-    main {
-        padding: 30px;
-    }
-
-    .project-card {
-        max-width: 45%;
-    }
-}
-
-/* Desktop Styles */
-@media only screen and (min-width: 1025px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        justify-content: center;
-    }
-
-    main {
-        max-width: 1000px;
-    }
-
-    .project-section {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-    }
-
-    .project-card {
-        width: 30%;
-        max-width: 300px;
-    }
-
-    .project-card:hover {
-        transform: scale(1.1);
+    .calculator {
+        width: 100%;
     }
 }
