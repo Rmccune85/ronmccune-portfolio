@@ -26,16 +26,19 @@ function deleteLast() {
 // Calculate Result
 function calculateResult() {
     const display = document.getElementById('display');
-    let expression = display.innerText.replace(/÷/g, '/').replace(/×/g, '*');
+    let expression = display.innerText
+        .replace(/÷/g, '/')
+        .replace(/×/g, '*')
+        .replace(/--/g, '+'); // Handle double negatives
 
     try {
-        // Check for invalid expressions
-        if (/[^0-9+\-*/().]/.test(expression)) {
+        // Check for invalid expressions or consecutive operators
+        if (/[^0-9+\-*/().]/.test(expression) || /[+\-*/]{2,}/.test(expression)) {
             throw new Error("Invalid input");
         }
 
         // Calculate and show the result
-        const result = eval(expression);
+        const result = Function(`"use strict"; return (${expression})`)();
 
         // Check if result is undefined or NaN
         if (result === undefined || isNaN(result)) {
@@ -47,3 +50,19 @@ function calculateResult() {
         display.innerText = 'Error';
     }
 }
+
+// Keyboard Support for Calculator
+document.addEventListener("keydown", function(event) {
+    const key = event.key;
+    const validKeys = "0123456789+-*/.()";
+
+    if (validKeys.includes(key)) {
+        appendToDisplay(key);
+    } else if (key === "Enter") {
+        calculateResult();
+    } else if (key === "Backspace") {
+        deleteLast();
+    } else if (key === "Escape") {
+        clearDisplay();
+    }
+});
