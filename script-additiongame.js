@@ -34,8 +34,15 @@ function checkAnswer() {
 }
 
 // Event Listeners
-document.getElementById("submit").addEventListener("click", checkAnswer);
-document.getElementById("newQuestion").addEventListener("click", generateQuestion);
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("submit").addEventListener("click", checkAnswer);
+    document.getElementById("newQuestion").addEventListener("click", generateQuestion);
+    document.getElementById("answer").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    });
+});
 
 // 🚀 Final Fireworks Effect - Optimized for Performance
 function startFireworks() {
