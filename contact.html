@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <!-- 
     Author: Ron McCune
-    File: about.html
+    File: contact.html
     Date: 02/23/2025
-    Description: About Me page for Ron McCune.
+    Description: Contact Me page for Ron McCune.
 -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Ron McCune</title>
+    <title>Contact Me - Ron McCune</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- External CSS -->
@@ -39,17 +39,42 @@
     <!-- Main Content Section -->
     <main>
         <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Ron McCune! I am an IT enthusiast passionate about cybersecurity.</p>
-            <p>I am currently pursuing my BSIT degree at Kent State University and have experience in IT, including working as an Inventory Specialist at Great Lakes Cheese. My journey has been filled with learning, growth, and dedication to achieving my career goals.</p>
-            <p>My interests include:</p>
+            <h2>Contact Me</h2>
+            <p>If you'd like to connect, feel free to reach out via the following:</p>
             <ul>
-                <li>Cybersecurity and Ethical Hacking</li>
-                <li>Web Development and Design</li>
-                <li>Riding my motorcycle and kayaking with my dog</li>
-                <li>Exploring new technologies and IT solutions</li>
+                <li><strong>School Email:</strong> <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a></li>
+                <li><strong>Primary Email:</strong> <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></li>
+                <li><strong>Mobile:</strong> <a href="tel:+13307201097">+1 (330) 720-1097</a></li>
             </ul>
-            <p>Feel free to connect with me to learn more or collaborate on exciting projects!</p>
+        </section>
+
+        <section>
+            <h2>Send Me a Message</h2>
+            <form action="https://formspree.io/f/xlekgzrk" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Location</h2>
+            <p>Here's where I study:</p>
+            <iframe 
+                style="width: 100%; border: 0;" 
+                height="450" 
+                loading="lazy" 
+                allowfullscreen 
+                referrerpolicy="no-referrer-when-downgrade" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.2789152184785!2d-80.81987862412032!3d41.25322160293141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833e2c753555555%3A0x0123456789abcdef!2s4314%20Mahoning%20Avenue%20NW%2C%20Warren%2C%20OH%2044483!5e0!3m2!1sen!2sus!4v1700000000000">
+            </iframe>
         </section>
     </main>
 
