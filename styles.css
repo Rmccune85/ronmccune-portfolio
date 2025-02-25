@@ -1,9 +1,19 @@
+/* 
+    Author: Ron McCune
+    File: styles.css
+    Date: 02/23/2025
+    Description: Styles for personal portfolio website with responsive design.
+*/
+
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
+    overflow-x: hidden;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* Header */
@@ -30,4 +40,99 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Main Content Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Section Titles */
+.highlight-text {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff3b30;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile Styles */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+    }
+
+    main {
+        padding: 30px;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1025px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        max-width: 1000px;
+    }
 }
