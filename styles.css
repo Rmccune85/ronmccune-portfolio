@@ -27,15 +27,17 @@ header {
     text-align: center;
     background: linear-gradient(45deg, #007bff, #0056b3);
     color: white;
-    padding: 20px 0;
+    padding: 15px 0; /* Reduced padding for a more compact header */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
     margin-bottom: 0;
     width: 100%;
-    /* Fix: Changed position to sticky for fixed header during scrolling */
-    /* Fix: Added width 100% to eliminate the white gap */
+    max-width: 1200px; /* Limit width for a cleaner look */
+    margin-left: auto;
+    margin-right: auto;
+    /* Fix: Added max-width and centered header */
 }
 
 /* Navigation Styles */
@@ -44,7 +46,7 @@ header nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin: 10px 0;
     flex-wrap: wrap;
     /* Fix: Added flex-wrap to allow navigation items to wrap on small screens */
@@ -108,7 +110,7 @@ main {
 /* Footer */
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background: #222;
     color: white;
     font-size: 14px;
@@ -116,8 +118,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-     left: 0;
-    position: fixed;
+    max-width: 1200px; /* Limit width to match header */
+    margin-left: auto;
+    margin-right: auto;
+     
     /* Fix: Changed position to fixed for a sticky footer */
 }
 
