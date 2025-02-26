@@ -9,6 +9,7 @@ body {
     line-height: 1.6; /* Space between lines for better readability */
     box-sizing: border-box; /* Includes padding and border in element's total width */
     overflow-x: hidden; /* Prevents horizontal scrolling */
+    min-height: 100vh; /* Ensures body takes full height */
     padding-bottom: 100px; /* Space at the bottom to avoid overlapping with the footer */
 }
 
@@ -23,6 +24,8 @@ header {
     top: 0; /* Sticks to the top of the page */
     z-index: 1000; /* Ensures header is above other content */
     width: 100%; /* Full width of the page */
+    max-width: 1200px; /* Limits width for cleaner look */
+    margin: 0 auto; /* Centers the header */
 }
 
 /* Navigation */
@@ -31,7 +34,7 @@ header nav ul {
     padding: 0; /* No padding around the navigation */
     display: flex; /* Flexbox layout for horizontal alignment */
     justify-content: center; /* Centers the navigation links */
-    gap: 15px; /* Space between each navigation link */
+    gap: 10px; /* Space between each navigation link */
     margin: 10px 0; /* Vertical margin for spacing */
     flex-wrap: wrap; /* Allows links to wrap on smaller screens */
 }
@@ -65,24 +68,29 @@ main {
     text-align: left; /* Left-aligns text for better readability */
 }
 
-/* Project Cards */
+/* Project Section */
 .project-section {
     display: flex; /* Flexbox for layout */
     flex-wrap: wrap; /* Allows cards to wrap to the next line */
     justify-content: center; /* Centers the cards */
     gap: 20px; /* Space between each card */
     padding: 20px; /* Padding around the section */
+    max-width: 1200px; /* Consistent width for all cards */
+    margin: 0 auto; /* Centers the project section */
 }
 
+/* Project Cards */
 .project-card {
     background: white; /* White background for cards */
     border-radius: 10px; /* Rounded corners for cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for card elevation */
-    width: 300px; /* Consistent width for all cards */
+    width: calc(33.333% - 20px); /* 3 cards per row with gap */
+    max-width: 300px; /* Maximum width for each card */
     text-align: center; /* Centers text inside the card */
     padding: 20px; /* Inner padding for content */
     transition: transform 0.3s; /* Smooth hover effect */
     margin-bottom: 20px; /* Space at the bottom for alignment */
+    box-sizing: border-box; /* Ensures consistent sizing */
 }
 
 .project-card:hover {
@@ -90,7 +98,7 @@ main {
 }
 
 .project-card img {
-    max-width: 80%; /* Limits image width for consistent layout */
+    max-width: 100%; /* Image adjusts to card width */
     height: auto; /* Maintains aspect ratio */
     border-radius: 5px; /* Rounded corners for images */
     margin-bottom: 10px; /* Space below the image */
@@ -99,4 +107,53 @@ main {
 .project-card h3 {
     color: #007bff; /* Blue color for headings */
     font-size: 20px; /* Font size for headings */
-    margin: 10px 0; /* Vertical margin
+    margin: 10px 0; /* Vertical margin for spacing */
+}
+
+.project-card p {
+    color: #555; /* Dark gray text for paragraphs */
+    font-size: 16px; /* Standard font size for paragraphs */
+    margin-bottom: 15px; /* Space below the paragraph */
+}
+
+.project-card a {
+    display: inline-block; /* Block display for better click area */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* White text for links */
+    background: #007bff; /* Blue background for buttons */
+    padding: 8px 15px; /* Padding for click area */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background 0.3s; /* Smooth hover effect */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.project-card a:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centers text in the footer */
+    padding: 15px; /* Padding for inner space */
+    background: #222; /* Dark background color */
+    color: white; /* White text for contrast */
+    font-size: 14px; /* Small text size for footer */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 100%; /* Full width of the page */
+    left: 0; /* Aligns to the left edge */
+    bottom: 0; /* Fixes to the bottom */
+    position: fixed; /* Stays at the bottom of the viewport */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 20px); /* 2 cards per row on tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .project-card {
+        width: 100%; /* Full width on mobile */
+    }
+}
