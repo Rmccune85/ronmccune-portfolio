@@ -1,4 +1,4 @@
- /* 
+/* 
     Author: Ron McCune
     File: styles.css
     Date: 02/23/2025
@@ -15,6 +15,7 @@ body {
     text-align: center;
     line-height: 1.6;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -24,20 +25,17 @@ header {
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-bottom: 0; /* This removes the white gap */
-}
-
-/* Navigation Styles */
-header nav {
-    margin-top: 10px;
-
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0;
+    width: 100%;
 }
 
 .profile-image {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 3px solid white;
     transition: transform 0.3s ease;
@@ -54,13 +52,11 @@ header nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin: 0;
-    background: none;
+    margin: 10px 0;
 }
 
 header nav ul li {
     display: inline-block;
-
 }
 
 header nav ul li a {
@@ -79,7 +75,7 @@ header nav ul li a:hover {
 
 /* Main Content Section */
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -103,6 +99,9 @@ footer {
     color: white;
     font-size: 14px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer a {
@@ -122,6 +121,8 @@ footer a:hover {
     display: inline-block;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 280px;
 }
 
 .number {
@@ -132,14 +133,14 @@ footer a:hover {
 }
 
 input[type="text"] {
-    font-size: 30px;
+    font-size: 24px;
     width: 100px;
     text-align: center;
     margin-top: 10px;
 }
 
 button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
@@ -154,64 +155,66 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Calculator Styles */
-.calculator {
-    background-color: #2D2D2D;
+/* Project Cards */
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 10px;
-    margin: center;
 }
 
-.display {
-    grid-column: span 4; /* Display spans all 4 columns */
-    background-color: #3C3C3C;
-    color: #FFF;
+.project-card {
+    background: white;
     border-radius: 10px;
-    font-size: 36px;
-    text-align: right;
-    padding: 10px;
-    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    white-space: nowrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-.button {
-    background-color: #4D4D4D;
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.project-card p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-card a {
+    display: inline-block;
+    text-decoration: none;
     color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 24px;
-    padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background 0.2s;
+    background: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
 }
 
-.button.zero {
-    grid-column: span 2; /* Zero button spans 2 columns */
-}
-
-.button.equal {
-    background-color: #FF9500;
-    color: white;
-}
-
-.button.equal:active {
-    background-color: #D67D00;
-}
-
-.button:hover {
-    background-color: #5C5C5C;
+.project-card a:hover {
+    background: #0056b3;
 }
 
 /* Media Queries for Responsive Design */
-@media only screen and (max-width: 400px) {
-    nav ul {
+@media only screen and (max-width: 600px) {
+    header nav ul {
         flex-direction: column;
     }
 
@@ -228,13 +231,17 @@ button:hover {
         font-size: 20px;
     }
 
-    .calculator {
-        width: 50%;
+    .project-card {
+        width: 80%;
+    }
+
+    .game-container {
+        width: 80%;
     }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
+    header nav ul {
         justify-content: space-around;
     }
 
@@ -243,56 +250,6 @@ button:hover {
     }
 
     .project-card {
-        max-width: 45%;
+        width: 45%;
     }
-} 
-/* Project Cards */
-.project-section {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
 }
-
-.project-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;  /* Consistent width */
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-image {
-    width: 150px;  /* Smaller and consistent image size */
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-description {
-    font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-}
-
-.project-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #007bff;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: color 0.3s;
-}
-
-.project-link:hover {
-    color: #0056b3;
-}
-
