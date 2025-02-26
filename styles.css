@@ -24,20 +24,26 @@ header {
     color: white;
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-bottom: 0; /* This removes the white gap */
+    margin-bottom: 0; /* Fixes the white gap */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Navigation Styles */
-header nav {
-    margin-top: 10px;
+header h1 {
+    margin: 10px 0 5px;
+}
 
+header h2 {
+    margin: 0;
+    font-weight: 300;
 }
 
 .profile-image {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border: 3px solid white;
     transition: transform 0.3s ease;
@@ -47,7 +53,12 @@ header nav {
     transform: scale(1.1);
 }
 
-/* Navigation */
+/* Navigation Styles */
+header nav {
+    margin-top: 10px;
+    background: none;
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
@@ -60,7 +71,6 @@ header nav ul {
 
 header nav ul li {
     display: inline-block;
-
 }
 
 header nav ul li a {
@@ -80,7 +90,7 @@ header nav ul li a:hover {
 /* Main Content Section */
 main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 120px auto 20px;  /* Adjusted for fixed header */
     background: white;
     padding: 20px;
     border-radius: 5px;
@@ -95,6 +105,49 @@ main {
     margin-bottom: 15px;
 }
 
+/* Project Cards */
+.project-card {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+}
+
+.project-image {
+    width: 80px;  /* Reduced image size */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
+.project-description {
+    font-size: 18px;  /* Enlarged text */
+    color: #333;
+    margin: 10px 0;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 20px;  /* Enlarged link text */
+    font-weight: bold;
+    margin-top: 5px;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -103,6 +156,10 @@ footer {
     color: white;
     font-size: 14px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
 }
 
 footer a {
@@ -162,20 +219,19 @@ button:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     width: 300px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin: 0 auto;
 }
 
 .display {
-    grid-column: span 4; /* Display spans all 4 columns */
+    grid-column: span 4;
     background-color: #3C3C3C;
     color: #FFF;
     border-radius: 10px;
     font-size: 36px;
     text-align: right;
     padding: 10px;
-    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     white-space: nowrap;
 }
@@ -187,22 +243,13 @@ button:hover {
     border-radius: 10px;
     font-size: 24px;
     padding: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: background 0.2s;
-}
-
-.button.zero {
-    grid-column: span 2; /* Zero button spans 2 columns */
 }
 
 .button.equal {
     background-color: #FF9500;
     color: white;
-}
-
-.button.equal:active {
-    background-color: #D67D00;
 }
 
 .button:hover {
@@ -232,17 +279,3 @@ button:hover {
         width: 100%;
     }
 }
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
-        justify-content: space-around;
-    }
-
-    main {
-        padding: 30px;
-    }
-
-    .project-card {
-        max-width: 45%;
-    }
-} 
