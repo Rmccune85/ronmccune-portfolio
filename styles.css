@@ -136,32 +136,41 @@ footer {
 }
 
 .project-card {
+    .project-card {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 280px;
-    padding: 20px;
+    width: 300px; /* Consistent width for all cards */
+    max-width: 90%; /* Responsive width */
     text-align: center;
-    transition: transform 0.3s;
-    /* Fix: Set a consistent width for uniform cards */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth hover effect */
+    margin-bottom: 20px;
+    /* Even spacing at the bottom */
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+   transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Elevated hover effect */
 }
 
 .project-card img {
-    max-width: 80%;
-    height: auto;
+   width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
-    /* Fix: Consistent image sizing for all project cards */
+    /* Consistent image sizing */
 }
 
 .project-card h3 {
+    .project-card h3 {
     color: #007bff;
-    font-size: 20px;
-    margin: 10px 0;
+    font-size: 22px;
+    margin: 15px 0 10px;
+    /* Increased font size for better visibility */
 }
 
 .project-card p {
