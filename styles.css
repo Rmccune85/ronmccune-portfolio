@@ -140,14 +140,13 @@ footer {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px; /* Consistent width for all cards */
-    max-width: 90%; /* Responsive width */
+    width: calc(33.33% - 40px); /* NEW Explanation: 3-column grid on desktop */
+    max-width: 300px; /* NEW Explanation: Ensures cards don't exceed width */
     text-align: center;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    /* Smooth hover effect */
     margin-bottom: 20px;
-    /* Even spacing at the bottom */
+    /* NEW Explanation: Smooth hover effect and even spacing */
 }
 
 .project-card:hover {
@@ -206,28 +205,11 @@ footer {
         width: 80px;
         height: 80px;
         /* Fix: Smaller profile image for mobile */
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 18px;
-    }
-
-    .project-card {
-        width: 90%; 
-        /* Fix: Adjusted width for better display on small screens */
-    }
-
-    .game-container {
+    }        
+     .project-card {
         width: 90%;
-    }
-
-    .project-card img {
-        width: 100%;
-    }
+        max-width: 300px;
+        /* NEW Explanation: Single column for mobile view */
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
@@ -241,7 +223,7 @@ footer {
     }
 
     .project-card {
-        width: 45%;
-        /* Fix: Two-column layout for project cards on tablets */
+        width: calc(50% - 40px);
+        /* NEW Explanation: Two-column layout for tablets */
     }
 }
