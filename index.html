@@ -7,111 +7,52 @@
 -->
 <html lang="en">
 
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ron McCune - Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <style>
-        /* Sticky Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav ul li {
-            display: inline-block;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            padding: 15px 20px;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #0056b3;
-            color: white;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            background-color: #007bff;
-            color: white;
-            padding: 20px 0;
-            margin-bottom: 20px;
-        }
-
-        .profile-image {
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border: 3px solid white;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.1);
-        }
-
-        /* Main Content */
-        .main-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
 
 <body>
+
     <!-- Header Section -->
     <header>
-        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking">
+        <img class="profile-image" src="images/kayaking.jpg" alt="Ron McCune Kayaking">
         <h1>Ron McCune</h1>
         <h2>Passionate About IT & Cybersecurity</h2>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Main Content Section -->
-    <section class="main-content">
-        <h2 class="highlight-text">Welcome to My Portfolio:</h2>
-        <p>Hi, I'm Ron McCune, an IT enthusiast with a passion for cybersecurity. This portfolio highlights my journey, skills, and future aspirations in the field.</p>
-        <p>Feel free to explore my work and reach out if you'd like to connect!</p>
-    </section>
+    <!-- Navigation Section -->
+    <nav aria-label="Main Navigation">
+        <ul>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-  
+    <!-- Main Content Section -->
+    <main>
+        <section>
+            <h2 class="section-title red-bold">Welcome to My Portfolio</h2>
+            <p>Hey there! I'm Ron McCune, an IT enthusiast with a passion for cybersecurity. This portfolio highlights my journey, skills, and future aspirations in the field.</p>
+            <p>Feel free to explore my work and reach out if you’d like to connect!</p>
+            <p>&#128187; <!-- Laptop emoji representing tech career --></p>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
         <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
+
 </body>
 </html>
