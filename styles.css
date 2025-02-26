@@ -246,3 +246,53 @@ button:hover {
         max-width: 45%;
     }
 } 
+/* Project Cards */
+.project-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;  /* Consistent width */
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 150px;  /* Smaller and consistent image size */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #0056b3;
+}
+
