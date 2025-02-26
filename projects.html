@@ -1,67 +1,81 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
 <!-- 
     Author: Ron McCune
     File: projects.html
     Date: 02/23/2025
     Description: Projects page for Ron McCune's portfolio.
 -->
-<html lang="en">
+
+<html lang="en"> <!-- Sets the language of the document to English -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ron McCune</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for international compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Ensures responsive design on mobile devices by setting viewport scaling -->
+    
+    <title>Projects - Ron McCune</title> <!-- Title displayed on the browser tab -->
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">  <!-- Imports 'Rubik' font from Google Fonts for consistent typography -->
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css"> <!-- Links to external stylesheet for consistent styling across pages -->
 </head>
 
-<body>
+<body> <!-- Main body of the webpage -->
+
     <!-- Header Section -->
-    <header>
-        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking">
-        <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <header> <!-- Container for the header content -->
+        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking"> 
+        <!-- Displays profile image with alt text for accessibility -->
+        
+        <h1>Ron McCune</h1> <!-- Main heading for name -->
+        <h2>My Journey as a BSIT student</h2> <!-- Subheading for portfolio description -->
+
+        <nav aria-label="Main Navigation"> <!-- Semantic navigation element with accessible label -->
+            <ul> <!-- Unordered list for navigation links -->
+                <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="about.html">About Me</a></li> <!-- Link to About Me page -->
+                <li><a href="projects.html">Projects</a></li> <!-- Link to Projects page (current) -->
+                <li><a href="resume.html">Resume</a></li> <!-- Link to Resume page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to Contact page -->
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main class="project-section">
-        <h2 class="highlight-text">My Projects</h2>
-        <p>Here are some of the projects I've been working on during my journey in IT and Cybersecurity:</p>
+    <main class="project-section"> <!-- Main container for the body content with a class for styling -->
+        <h2 class="highlight-text">My Projects</h2>  <!-- Main heading for the Projects section with highlight styling -->        
+        <p>Here are some of the projects I've been working on during my journey in IT and Cybersecurity:</p>   <!-- Introductory paragraph for project showcase -->
 
-       
-       <!-- Links to GitHub Projects -->
-       <section class="project-section">
-    <div class="project-card">
-        <img class="project-image" src="addition-game-screenshot.png" alt="Addition Game">
-        <h3 class="project-description">Addition Game</h3>
-        <a class="project-link" href="https://rmccune85.github.io/Addition-Game/" target="_blank">Play Now</a>
-    </div>
+        <!-- Project Cards Section -->
+        <section class="project-section"> <!-- Section to group project cards with styling class -->
+        
+            <!-- Addition Game Project Card -->
+            <div class="project-card"> <!-- Container for the Addition Game project card -->
+                <img class="project-image" src="addition-game-screenshot.png" alt="Addition Game">      <!-- Image for Addition Game with alt text for accessibility -->                
+                <h3 class="project-description">Addition Game</h3>   <!-- Subheading for the Addition Game project -->                
+                <a class="project-link" href="https://rmccune85.github.io/Addition-Game/" target="_blank">Play Now</a>   <!-- Link to the live Addition Game hosted on GitHub Pages -->
+                <!-- target="_blank" opens the link in a new browser tab -->
+            </div>
 
-    <div class="project-card">
-        <img class="project-image" src="calculator.jpg" alt="Calculator">
-        <h3 class="project-description">Calculator</h3>
-        <a class="project-link" href="https://rmccune85.github.io/Calculator/" target="_blank">Use Calculator</a>
-    </div>
-</section>
+            <!-- Calculator Project Card -->
+            <div class="project-card"> <!-- Container for the Calculator project card -->
+                <img class="project-image" src="calculator.jpg" alt="Calculator">    <!-- Image for Calculator project with alt text for accessibility -->                
+                <h3 class="project-description">Calculator</h3>   <!-- Subheading for the Calculator project -->                
+                <a class="project-link" href="https://rmccune85.github.io/Calculator/" target="_blank">Use Calculator</a>   <!-- Link to the live Calculator hosted on GitHub Pages -->
+                <!-- target="_blank" opens the link in a new browser tab -->
+            </div>
 
-        </div>        
+        </section> <!-- End of Project Cards Section -->
+
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+    <footer> <!-- Footer container for copyright and contact info -->
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>   <!-- Copyright notice with the current year -->        
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>    <!-- Email contact link for easy communication -->
     </footer>
+    
 </body>
-</html>
+</html> <!-- End of HTML document -->
