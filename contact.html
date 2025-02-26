@@ -1,69 +1,105 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
 <!-- 
     Author: Ron McCune
     File: contact.html
     Date: 02/23/2025
     Description: Contact Me page for Ron McCune.
 -->
-<html lang="en">
+
+<html lang="en"> <!-- Sets the language of the document to English -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Ron McCune</title>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for international compatibility -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Ensures responsive design on mobile devices by setting viewport scaling -->
+    
+    <title>Contact Me - Ron McCune</title> <!-- Title displayed on the browser tab -->
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet"> 
+    <!-- Imports 'Rubik' font from Google Fonts for consistent typography -->
+
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="styles.css" type="text/css"> 
+    <!-- Links to external stylesheet for consistent styling across pages -->
 </head>
 
-<body>
+<body> <!-- Main body of the webpage -->
+
     <!-- Header Section -->
-    <header>
-        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking">
-        <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <header> <!-- Container for the header content -->
+        <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking"> 
+        <!-- Displays profile image with alt text for accessibility -->
+        
+        <h1>Ron McCune</h1> <!-- Main heading for name -->
+        <h2>My Journey as a BSIT student</h2> <!-- Subheading for portfolio description -->
+
+        <nav aria-label="Main Navigation"> <!-- Semantic navigation element with accessible label -->
+            <ul> <!-- Unordered list for navigation links -->
+                <li><a href="index.html">Home</a></li> <!-- Link to Home page -->
+                <li><a href="about.html">About Me</a></li> <!-- Link to About Me page -->
+                <li><a href="projects.html">Projects</a></li> <!-- Link to Projects page -->
+                <li><a href="resume.html">Resume</a></li> <!-- Link to Resume page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to Contact page -->
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>Contact Me</h2>
-            <p>If you'd like to connect, feel free to reach out via the following:</p>
-            <ul>
-                <li><strong>School Email:</strong> <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a></li>
-                <li><strong>Primary Email:</strong> <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></li>
-                <li><strong>Mobile:</strong> <a href="tel:+13307201097">+1 (330) 720-1097</a></li>
+    <main> <!-- Main container for the body content -->
+
+        <!-- Contact Information Section -->
+        <section> <!-- Section for contact information -->
+            <h2>Contact Me</h2> <!-- Heading for contact information -->
+            <p>If you'd like to connect, feel free to reach out via the following:</p> 
+            <!-- Introductory paragraph for contact options -->
+
+            <ul> <!-- Unordered list of contact methods -->
+                <li>
+                    <strong>School Email:</strong> 
+                    <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a>
+                    <!-- School email link for easy communication -->
+                </li>
+                <li>
+                    <strong>Primary Email:</strong> 
+                    <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a>
+                    <!-- Primary email link for personal contact -->
+                </li>
+                <li>
+                    <strong>Mobile:</strong> 
+                    <a href="tel:+13307201097">+1 (330) 720-1097</a>
+                    <!-- Mobile phone link to initiate a call directly on mobile devices -->
+                </li>
             </ul>
         </section>
 
-        <section>
-            <h2>Location</h2>
-            <p>Here's where I study:</p>
+        <!-- Location Section -->
+        <section> <!-- Section for displaying location -->
+            <h2>Location</h2> <!-- Heading for location -->
+            <p>Here's where I study:</p> <!-- Introductory text for map location -->
+
             <iframe 
-                style="width: 100%; border: 0;" 
-                height="450" 
-                loading="lazy" 
-                allowfullscreen 
+                style="width: 100%; border: 0;" <!-- Full-width and borderless styling -->
+                height="450" <!-- Height of the map frame -->
+                loading="lazy" <!-- Improves performance by loading the map lazily -->
+                allowfullscreen <!-- Allows full-screen mode for map -->
                 referrerpolicy="no-referrer-when-downgrade" 
+                <!-- Ensures referrer information is not sent when using HTTPS -->
+                
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.2789152184785!2d-80.81987862412032!3d41.25322160293141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833e2c753555555%3A0x0123456789abcdef!2s4314%20Mahoning%20Avenue%20NW%2C%20Warren%2C%20OH%2044483!5e0!3m2!1sen!2sus!4v1700000000000">
+                <!-- Google Maps embedded iframe with location of study area -->
             </iframe>
         </section>
     </main>
 
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+    <footer> <!-- Footer container for copyright and contact info -->
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> 
+        <!-- Copyright notice with the current year -->
+        
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> 
+        <!-- Email contact link for easy communication -->
     </footer>
+    
 </body>
-</html>
+</html> <!-- End of HTML document -->
