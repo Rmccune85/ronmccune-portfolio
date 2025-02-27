@@ -241,6 +241,45 @@ footer {
         color: white;
     }
 }
+/* Project Cards Mobile Adjustment */
+@media only screen and (max-width: 600px) {
+    .project-card {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-card h3 {
+        font-size: 20px;
+    }
+}
+/* Dice Game Mobile Layout */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dice-display {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dice-face {
+        width: 25%;
+        margin-bottom: 10px;
+    }
+
+    .dice-face img {
+        width: 80%;
+        height: auto;
+    }
+}
+
 /* 📌 Signature  
 // ───── ByteShifter ─────  
 // Crafted with 💻 & ☕  */
