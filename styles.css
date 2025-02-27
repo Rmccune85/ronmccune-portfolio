@@ -220,3 +220,28 @@ footer {
         /* New Explanation: Two-column layout for project cards on tablets */
     }
 }
+/* Responsive Navigation Fix */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border-radius: 0;
+        background: #0056b3;
+        color: white;
+    }
+}
+/* 📌 Signature  
+// ───── ByteShifter ─────  
+// Crafted with 💻 & ☕  */
+
