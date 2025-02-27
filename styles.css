@@ -1,41 +1,43 @@
-/* 
-    Author: Ron McCune
-    File: styles.css
-    Date: 02/23/2025
-    Description: Styles for personal portfolio website with responsive design.
+/*  
+    Author: Ron McCune  
+    File: styles.css  
+    Date: 02/23/2025  
+    Description: Styles for personal portfolio website with responsive design.  
 */
 
-/* General Styles */
+/* ===========================
+   General Styles
+=========================== */
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Poppins', Arial, sans-serif; /* Main font for consistency across devices */
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    color: #333; /* Dark gray text color for readability */
     padding: 0;
     margin: 0;
-    text-align: center;
-    line-height: 1.6;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    padding-bottom: 80px;
-    /* New Explanation: Added box-sizing for consistent element sizing across browsers */
+    line-height: 1.6; /* Improved text spacing */
+    box-sizing: border-box; /* Consistent box-sizing across all elements */
+    overflow-x: hidden; /* Prevents horizontal scroll on mobile */
+    padding-bottom: 80px; /* Space for fixed footer */
 }
 
-/* Header */
+/* ===========================
+   Header Styles
+=========================== */
 header {
     text-align: center;
-    background: linear-gradient(45deg, #007bff, #0056b3);
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1000; /* Keeps header on top */
     width: 100%;
-    /* New Explanation: Reduced padding for a more compact header */
-    /* New Explanation: Position sticky keeps the header visible on scroll */
 }
 
-/* Navigation Styles */
+/* ===========================
+   Navigation Styles
+=========================== */
 header nav ul {
     list-style: none;
     padding: 0;
@@ -43,8 +45,7 @@ header nav ul {
     justify-content: center;
     gap: 10px;
     margin: 10px 0;
-    flex-wrap: wrap;
-    /* New Explanation: Flex-wrap allows links to stack on smaller screens */
+    flex-wrap: wrap; /* Wraps links on smaller screens */
 }
 
 header nav ul li {
@@ -59,31 +60,33 @@ header nav ul li a {
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
     display: block;
-    /* New Explanation: Reduced padding for smaller clickable areas on mobile */
 }
 
 header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
     color: white;
 }
 
-/* Profile Image */
+/* ===========================
+   Profile Image Styles
+=========================== */
 .profile-image {
-    border-radius: 50%;
+    border-radius: 50%; /* Circular profile image */
     width: 90px;
     height: 90px;
-    object-fit: cover;
+    object-fit: cover; /* Maintains aspect ratio */
     border: 3px solid white;
     transition: transform 0.3s ease;
     margin: 0 auto;
-    /* New Explanation: Reduced image size for better layout balance */
 }
 
 .profile-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Main Content Section */
+/* ===========================
+   Main Content Section
+=========================== */
 main {
     max-width: 800px;
     margin: 20px auto;
@@ -92,10 +95,11 @@ main {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    /* New Explanation: Added text-align left for consistent content alignment */
 }
 
-/* Footer */
+/* ===========================
+   Footer Styles
+=========================== */
 footer {
     text-align: center;
     padding: 10px;
@@ -104,21 +108,19 @@ footer {
     font-size: 14px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    left: 0;
-    bottom: 0;
     position: fixed;
-    /* New Explanation: Position fixed keeps the footer at the bottom */
-    /* New Explanation: Reduced padding for a more compact footer */
+    bottom: 0;
 }
 
-/* Project Cards */
+/* ===========================
+   Project Cards
+=========================== */
 .projects-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    /* New Explanation: Flexbox used for consistent alignment */
 }
 
 .project-card {
@@ -131,13 +133,11 @@ footer {
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
-    /* New Explanation: Consistent width for all cards */
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Zoom effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    /* New Explanation: Smooth hover effect */
 }
 
 .project-card img {
@@ -146,20 +146,12 @@ footer {
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
-    /* New Explanation: Consistent image sizing */
 }
 
 .project-card h3 {
     color: #007bff;
     font-size: 22px;
     margin: 15px 0 10px;
-    /* New Explanation: Increased font size for better visibility */
-}
-
-.project-card p {
-    color: #555;
-    font-size: 16px;
-    margin-bottom: 15px;
 }
 
 .project-card a {
@@ -177,91 +169,17 @@ footer {
     background: #0056b3;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 600px) {
-    header nav ul {
-        flex-direction: column;
-        gap: 5px;
-        /* New Explanation: Vertical stacking for mobile navigation */
-    }
-
-    .profile-image {
-        width: 80px;
-        height: 80px;
-        /* New Explanation: Smaller profile image for mobile */
-    }
-
-    .project-card {
-        width: 90%; 
-        /* New Explanation: Adjusted width for better display on small screens */
-    }
-
-    .game-container {
-        width: 90%;
-    }
-
-    .project-card img {
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    header nav ul {
-        justify-content: space-around;
-        /* New Explanation: Even spacing for navigation items on tablets */
-    }
-
-    main {
-        padding: 30px;
-    }
-
-    .project-card {
-        width: 45%;
-        /* New Explanation: Two-column layout for project cards on tablets */
-    }
-}
-/* Responsive Navigation Fix */
+/* ===========================
+   Responsive Design for Mobile
+=========================== */
 @media only screen and (max-width: 600px) {
     nav ul {
         flex-direction: column;
         gap: 10px;
-        padding: 0;
     }
 
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 10px;
-        border-radius: 0;
-        background: #0056b3;
-        color: white;
-    }
-}
-/* Project Cards Mobile Adjustment */
-@media only screen and (max-width: 600px) {
     .project-card {
         width: 100%; 
-        margin-bottom: 20px;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: auto;
-    }
-
-    .project-card h3 {
-        font-size: 20px;
-    }
-}
-/* Dice Game Mobile Layout */
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 100%;
-        padding: 10px;
     }
 
     .dice-display {
@@ -280,7 +198,23 @@ footer {
     }
 }
 
-/* 📌 Signature  
-// ───── ByteShifter ─────  
-// Crafted with 💻 & ☕  */
+/* ===========================
+   Responsive Design for Tablets
+=========================== */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+    }
 
+    .project-card {
+        width: 45%; /* Two-column layout on tablets */
+    }
+}
+
+/* ===========================
+   📌 Signature  
+=========================== */
+/*  
+// ───── ByteShifter ─────  
+// Crafted with 💻 & ☕  
+*/
