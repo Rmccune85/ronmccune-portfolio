@@ -2,7 +2,7 @@
 <!-- 
     Author: Ron McCune
     File: contact.html
-    Date: 02/23/2025
+    Date: 03/08/2025
     Description: Contact Me page for Ron McCune.
 -->
 <html lang="en">
@@ -20,9 +20,8 @@
 <body>
     <!-- Header Section -->
     <header>
-        
         <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
+        <h2>My Journey as a BSIT Student</h2>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -35,28 +34,57 @@
     </header>
 
     <!-- Main Content Section -->
-    <main>
+    <main class="contact-section">
         <section>
-            <h2>Contact Me</h2>
+            <h2>📬 Contact Me</h2>
             <p>If you'd like to connect, feel free to reach out via the following:</p>
             <ul>
-                <li><strong>School Email:</strong> <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a></li>
-                <li><strong>Primary Email:</strong> <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></li>
-                <li><strong>Mobile:</strong> <a href="tel:+13307201097">+1 (330) 720-1097</a></li>
+                <li>📧 <strong>School Email:</strong> <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a></li>
+                <li>📩 <strong>Primary Email:</strong> <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></li>
+                <li>📱 <strong>Mobile:</strong> <a href="tel:+13307201097">+1 (330) 720-1097</a></li>
             </ul>
         </section>
 
-        <section>
-            <h2>Location</h2>
-            <p>Here's where I study:</p>
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h3>💬 Send Me a Message</h3>
+            <p>Fill out the form below, and I'll get back to you as soon as possible.</p>
+            <form action="mailto:mccu31@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Location -->
+        <section class="location">
+            <h3>📍 Where I Study</h3>
+            <p>Currently pursuing my **Bachelor of Science in Information Technology** at **Kent State University - Trumbull Campus**.</p>
             <iframe 
-                style="width: 100%; border: 0;" 
+                style="width: 100%; border: 0; border-radius: 10px;" 
                 height="450" 
                 loading="lazy" 
                 allowfullscreen 
                 referrerpolicy="no-referrer-when-downgrade" 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.2789152184785!2d-80.81987862412032!3d41.25322160293141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833e2c753555555%3A0x0123456789abcdef!2s4314%20Mahoning%20Avenue%20NW%2C%20Warren%2C%20OH%2044483!5e0!3m2!1sen!2sus!4v1700000000000">
             </iframe>
+        </section>
+
+        <!-- Social Links -->
+        <section class="social-links">
+            <h3>🔗 Connect with Me</h3>
+            <p>Want to check out my work or connect professionally? Follow me on GitHub or LinkedIn!</p>
+            <ul>
+                <li>💻 <strong>GitHub:</strong> <a href="https://github.com/Rmccune85" target="_blank">github.com/Rmccune85</a></li>
+                <li>🔗 <strong>LinkedIn:</strong> <a href="#" target="_blank">Coming Soon</a></li>
+            </ul>
         </section>
     </main>
 
@@ -65,5 +93,12 @@
         <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
         <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
+
 </body>
 </html>
+
+<!--   
+   ───── ByteShifter ─────  
+   Crafted with 💻 & ☕  
+   https://github.com/rmccune85  
+-->  
