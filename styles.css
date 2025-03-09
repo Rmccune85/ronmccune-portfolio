@@ -2,11 +2,11 @@
    Author: Ron McCune
    File: styles.css
    Date: 03/08/2025
-   Description: Optimized styles for personal portfolio website ensuring consistency across devices and GitHub Pages.
+   Description: Optimized styles for GitHub Pages and local use.
 */
 
 /* ===========================
-   CSS Reset and Global Styles
+   Global Styles
 =========================== */
 * {
     margin: 0;
@@ -18,43 +18,49 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
     text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 /* ===========================
-   Header Styles (Reduced Size)
+   Header Styles
 =========================== */
 header {
+    text-align: center;
     background: linear-gradient(45deg, #007bff, #0056b3);
     color: white;
-    padding: 12px 0; /* Reduced padding */
+    padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
     width: 100%;
 }
 
-header h1 {
-    font-size: 26px; /* Smaller header title */
-    margin-bottom: 5px;
-}
-
-header h2 {
-    font-size: 18px; /* Reduced subtitle size */
+header img.profile-image {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: 100px;
+    height: 100px;
     margin-bottom: 10px;
 }
 
-/* Navigation Styles */
-.nav-container {
+header h1 {
+    font-size: 28px;
+}
+
+header h2 {
+    font-size: 18px;
+    color: #e6e6e6;
+}
+
+/* ===========================
+   Navigation Styles
+=========================== */
+nav {
     display: flex;
     justify-content: center;
-    align-items: center;
     background: #007bff;
     padding: 10px 0;
 }
@@ -62,45 +68,27 @@ header h2 {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 15px;
 }
 
-.nav-links a {
+.nav-links li a {
     color: white;
     text-decoration: none;
     font-size: 16px;
     padding: 8px 12px;
-    transition: background 0.3s, color 0.3s;
     border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* ===========================
-   Profile Image Styles
-=========================== */
-.profile-image {
-    border-radius: 50%;
-    width: 90px; /* Adjusted for better visibility */
-    height: 90px;
-    object-fit: cover;
-    border: 3px solid white;
-    transition: transform 0.3s ease;
-    margin: 10px auto;
-}
-
-.profile-image:hover {
-    transform: scale(1.1);
 }
 
 /* ===========================
    Main Content Section
 =========================== */
 main {
-    max-width: 900px;
+    max-width: 800px;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -110,24 +98,30 @@ main {
     flex-grow: 1;
 }
 
+.section-title {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
 /* ===========================
-   Footer Styles (Reduced Size)
+   Footer Styles
 =========================== */
 footer {
+    text-align: center;
+    padding: 10px;
     background: #222;
     color: white;
-    padding: 8px 0; /* Reduced padding */
     font-size: 14px;
-    text-align: center;
     width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
+    margin-top: auto;
 }
 
 footer a {
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 footer a:hover {
@@ -135,89 +129,30 @@ footer a:hover {
 }
 
 /* ===========================
-   Project Card Styles
-=========================== */
-.projects-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.project-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 280px;
-    max-width: 90%;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.project-card img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-card a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background: #007bff;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    background: #0056b3;
-}
-
-/* ===========================
-   Responsive Adjustments
+   Responsive Design
 =========================== */
 @media only screen and (max-width: 600px) {
-    .profile-image {
-        width: 75px;
-        height: 75px;
+    header img.profile-image {
+        width: 80px;
+        height: 80px;
     }
-
-    h1 {
-        font-size: 22px;
+    
+    header h1 {
+        font-size: 24px;
     }
-
-    h2 {
+    
+    header h2 {
         font-size: 16px;
     }
-
-    .project-card {
-        width: 100%;
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 8px;
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .project-card {
-        width: 45%;
-    }
-}
-
-/* ===========================
-   📌 Signature  
-=========================== */
-/*  
-// ───── ByteShifter ─────  
-// Crafted with 💻 & ☕  
-// https://github.com/Rmccune85  
+/* 
+   ───── ByteShifter ───── 
+   Crafted with 💻 & ☕ 
+   https://github.com/Rmccune85
 */
