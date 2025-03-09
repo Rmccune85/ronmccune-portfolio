@@ -5,44 +5,34 @@
     Date: 03/08/2025
     Description: Designing for Tablet and Desktop Devices.
 -->
-
 <html lang="en">
 <head>
-    <title>About Me - Ron McCune</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ron McCune</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="./css/styles.css" type="text/css">    
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
-<body>
 
+<body>
     <!-- Header Section -->
     <header>
-        <img class="profile-image" src="images/kayaking.jpg" alt="Ron McCune Kayaking">
         <h1>Ron McCune</h1>
-        <h2>Passionate About IT & Cybersecurity</h2>
+        <h2>My Journey as a BSIT student</h2>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Navigation Section -->
-   <nav>
-    
-
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-    <!-- Main Content Section -->
-    <main>
-        <section class="about-section">
+<section class="about-section">
             <h2 class="section-title red-bold">About Me</h2>
             <p>Hey there! I’m <strong>Ron McCune</strong>, an IT professional and cybersecurity enthusiast with a deep passion for problem-solving and technology.</p>
             
@@ -93,18 +83,6 @@
         <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
         <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
-
-            hamburger.addEventListener("click", function () {
-                navLinks.classList.toggle("active");
-            });
-        });
-    </script>
-
 </body>
 </html>
 
