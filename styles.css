@@ -5,25 +5,26 @@
    Description: Optimized styles for GitHub Pages and local use.
 */
 
-/* ===========================
-   Global Styles
-=========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/*  
+    Author: Ron McCune  
+    File: styles.css  
+    Date: 02/23/2025  
+    Description: Styles for personal portfolio website with responsive design.  
+*/
 
+/* ===========================
+   General Styles
+=========================== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
-    line-height: 1.6;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Poppins', Arial, sans-serif; /* Main font for consistency across devices */
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    color: #333; /* Dark gray text color for readability */
+    padding: 0;
+    margin: 0;
+    line-height: 1.6; /* Improved text spacing */
+    box-sizing: border-box; /* Consistent box-sizing across all elements */
+    overflow-x: hidden; /* Prevents horizontal scroll on mobile */
+    padding-bottom: 80px; /* Space for fixed footer */
 }
 
 /* ===========================
@@ -31,84 +32,76 @@ body {
 =========================== */
 header {
     text-align: center;
-    background: linear-gradient(45deg, #007bff, #0056b3);
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient for modern look */
     color: white;
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Keeps header on top */
     width: 100%;
-}
-
-header img.profile-image {
-    border-radius: 50%;
-    border: 3px solid #fff;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-header h1 {
-    font-size: 28px;
-}
-
-header h2 {
-    font-size: 18px;
-    color: #e6e6e6;
 }
 
 /* ===========================
    Navigation Styles
 =========================== */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #007bff;
-    padding: 10px 0;
-}
-
-.nav-links {
+header nav ul {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 10px;
+    margin: 10px 0;
+    flex-wrap: wrap; /* Wraps links on smaller screens */
 }
 
-.nav-links li {
+header nav ul li {
     display: inline-block;
 }
 
-.nav-links li a {
-    color: white;
+header nav ul li a {
     text-decoration: none;
-    font-size: 16px;
+    color: white;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 5px 10px;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
+    display: block;
 }
 
-.nav-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+    color: white;
+}
+
+/* ===========================
+   Profile Image Styles
+=========================== */
+.profile-image {
+    border-radius: 50%; /* Circular profile image */
+    width: 90px;
+    height: 90px;
+    object-fit: cover; /* Maintains aspect ratio */
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 /* ===========================
    Main Content Section
 =========================== */
 main {
-    max-width: 850px;
+    max-width: 800px;
     margin: 20px auto;
     background: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    flex-grow: 1;
-}
-
-.section-title {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 10px;
 }
 
 /* ===========================
@@ -120,46 +113,115 @@ footer {
     background: #222;
     color: white;
     font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    margin-top: auto;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: #0056b3;
+    position: fixed;
+    bottom: 0;
 }
 
 /* ===========================
-   Responsive Design
+   Project Cards
+=========================== */
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    color: #007bff;
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background: #0056b3;
+}
+
+/* ===========================
+   Responsive Design for Mobile
 =========================== */
 @media only screen and (max-width: 600px) {
-    header img.profile-image {
-        width: 80px;
-        height: 80px;
-    }
-    
-    header h1 {
-        font-size: 24px;
-    }
-    
-    header h2 {
-        font-size: 16px;
-    }
-    
-    .nav-links {
+    nav ul {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 100%; 
+    }
+
+    .dice-display {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .dice-face {
+        width: 25%;
+        margin-bottom: 10px;
+    }
+
+    .dice-face img {
+        width: 80%;
+        height: auto;
     }
 }
 
-/* 
-   ───── ByteShifter ───── 
-   Crafted with 💻 & ☕ 
-   https://github.com/Rmccune85
+/* ===========================
+   Responsive Design for Tablets
+=========================== */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .project-card {
+        width: 45%; /* Two-column layout on tablets */
+    }
+}
+
+/* ===========================
+   📌 Signature  
+=========================== */
+/*  
+// ───── ByteShifter ─────  
+// Crafted with 💻 & ☕  
 */
