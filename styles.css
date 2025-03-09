@@ -210,8 +210,16 @@ footer {
     .project-card {
         width: 45%; /* Two-column layout on tablets */
     }
+
+.red-bold {
+    color: red; /* Red bold text */
+    font-weight: bold;
 }
 
+.blue-bold {
+    color: blue; /* Blue bold text */
+    font-weight: bold;
+}
 /* ===========================
    📌 Signature  
 =========================== */
