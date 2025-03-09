@@ -2,8 +2,8 @@
 <!-- 
     Author: Ron McCune
     File: index.html
-    Date: 02/23/2025
-    Description: Home page for Ron McCune's portfolio.
+    Date: 03/08/2025
+    Description: Designing for Tablet and Desktop Devices.
 -->
 <html lang="en">
 
@@ -30,26 +30,73 @@
    
 
     <!-- Navigation Section -->
+        <nav>
+        <div class="nav-container">
+            <!-- Hamburger Icon -->
+            <div class="hamburger">☰</div>
     <nav aria-label="Main Navigation">
-        <ul>
-            <!-- Make sure all links are lowercase and match your file names exactly -->
-            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+       <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
     </nav>
     </header>
     <!-- Main Content Section -->
     <main>
-        <section>
+         <section class="intro-section">
             <h2 class="section-title red-bold">Welcome to My Portfolio</h2>
-            <p>I'm Ron McCune, an IT enthusiast with a passion for cybersecurity. This portfolio highlights my journey as a BSIT student.</p>
-            <p>Feel free to explore my work and reach out if you’d like to connect!</p>
-            <p>&#128187; <!-- Laptop emoji representing tech career --></p>
+            <p>Hi, I’m <strong>Ron McCune</strong> – a cybersecurity enthusiast, IT professional, and problem solver with a strong passion for technology. My journey in IT has been fueled by curiosity, hands-on learning, and the drive to stay ahead in the ever-evolving world of cybersecurity.</p>
+            
+            <p>This portfolio is more than just a collection of projects—it's a reflection of my commitment to securing digital spaces, improving system efficiency, and continuously expanding my knowledge. Whether you're an employer, collaborator, or fellow tech enthusiast, I invite you to explore my work, skills, and accomplishments.</p>
+
+            <p>If you’re looking for someone dedicated, adaptable, and always eager to tackle complex problems, let’s connect!</p>
         </section>
-        
+         <!-- What I Do Section -->
+        <section class="what-i-do">
+            <h2 class="section-title">What I Do</h2>
+            <p>🔹 **Cybersecurity & Network Security** – Exploring ethical hacking, penetration testing, and security best practices to protect digital assets.</p>
+            <p>🔹 **IT Solutions & Troubleshooting** – Identifying, diagnosing, and resolving system issues with a focus on efficiency and reliability.</p>
+            <p>🔹 **Web Development** – Creating clean, responsive, and functional websites with HTML, CSS, and JavaScript.</p>
+            <p>🔹 **Continuous Learning & Growth** – Staying up to date with emerging tech trends and honing my skills through hands-on projects and certifications.</p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Let's Connect!</h2>
+            <p>I'm always open to discussing new opportunities, collaborations, and tech innovations. Feel free to reach out!</p>
+            <p>📩 <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+<!-- 
+   ───── ByteShifter ───── 
+   Crafted with 💻 & ☕ 
+   https://github.com/Rmccune85
+--> 
     </main>
 
     <!-- Footer Section -->
