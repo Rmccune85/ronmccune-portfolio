@@ -9,7 +9,7 @@
    General Styles
 =========================== */
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* Consistent font */
+    font-family: 'Poppins', Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     padding: 0;
@@ -23,13 +23,13 @@ body {
 }
 
 /* ===========================
-   Header Styles
+   Header Styles (Smaller Size)
 =========================== */
 header {
     text-align: center;
     background: linear-gradient(45deg, #007bff, #0056b3);
     color: white;
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
@@ -37,28 +37,31 @@ header {
     width: 100%;
 }
 
-/* ===========================
-   Navigation Styles
-=========================== */
+header h1 {
+    font-size: 22px; /* Smaller title */
+    margin: 5px 0;
+}
+
+header h2 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
 header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
+    gap: 8px;
+    margin: 5px 0;
     flex-wrap: wrap;
-}
-
-header nav ul li {
-    display: inline-block;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 5px 8px; /* Slightly smaller buttons */
     border-radius: 5px;
     transition: background 0.3s, color 0.3s;
     display: block;
@@ -73,8 +76,8 @@ header nav ul li a:hover {
 =========================== */
 .profile-image {
     border-radius: 50%;
-    width: 90px;
-    height: 90px;
+    width: 80px; /* Smaller image */
+    height: 80px;
     object-fit: cover;
     border: 3px solid white;
     transition: transform 0.3s ease;
@@ -100,17 +103,25 @@ main {
 }
 
 /* ===========================
-   Footer Styles
+   Footer Styles (Smaller Size)
 =========================== */
 footer {
     text-align: center;
-    padding: 10px;
+    padding: 5px; /* Reduced padding */
     background: #222;
     color: white;
-    font-size: 14px;
+    font-size: 12px; /* Smaller text */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     position: relative;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    font-size: 12px;
 }
 
 /* ===========================
@@ -128,10 +139,10 @@ footer {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 280px; /* Adjusted width */
     max-width: 90%;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
     margin-bottom: 20px;
 }
@@ -142,8 +153,8 @@ footer {
 }
 
 .project-card img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -151,8 +162,8 @@ footer {
 
 .project-card h3 {
     color: #007bff;
-    font-size: 22px;
-    margin: 15px 0 10px;
+    font-size: 20px;
+    margin: 10px 0;
 }
 
 .project-card a {
@@ -160,7 +171,7 @@ footer {
     text-decoration: none;
     color: white;
     background: #007bff;
-    padding: 8px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     transition: background 0.3s;
     font-weight: bold;
@@ -250,4 +261,4 @@ footer {
 /*  
 // ───── ByteShifter ─────  
 // Crafted with 💻 & ☕  
-*/  
+*/
