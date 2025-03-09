@@ -66,15 +66,6 @@ header nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
     color: white;
 }
-.red-text {
-    color: red !important;
-    font-weight: bold;
-}
-
-.blue-text {
-    color: blue !important;
-    font-weight: bold;
-}
 
 /* ===========================
    Profile Image Styles
@@ -220,13 +211,14 @@ footer {
         width: 45%; /* Two-column layout on tablets */
     }
 
+/* Updated color styles for professional look */
 .red-text {
-    color: red !important;
+    color: #c82333 !important; /* Darker red for headers */
     font-weight: bold;
 }
 
 .blue-text {
-    color: blue !important;
+    color: #0056b3 !important; /* Muted blue for highlights */
     font-weight: bold;
 }
 
