@@ -2,51 +2,89 @@
 <!-- 
     Author: Ron McCune
     File: about.html
-    Date: 02/23/2025
-    Description: About Me page for Ron McCune.
+    Date: 03/08/2025
+    Description: Designing for Tablet and Desktop Devices.
 -->
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Ron McCune</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">    
 </head>
-
 <body>
+
     <!-- Header Section -->
     <header>
+        <img class="profile-image" src="images/kayaking.jpg" alt="Ron McCune Kayaking">
         <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h2>Passionate About IT & Cybersecurity</h2>
     </header>
+
+    <!-- Navigation Section -->
+   <nav>
+    
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
     <!-- Main Content Section -->
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Ron McCune! I am an IT enthusiast passionate about cybersecurity.</p>
-            <p>I'm working toward my BSIT degree at Kent State University where I am gaining hands-on IT experience. Along the way, I've learned a lot, grown both personally and professionally, and stayed focused on reaching my career goals.</p>
-            <p>My interests include:</p>
+        <section class="about-section">
+            <h2 class="section-title red-bold">About Me</h2>
+            <p>Hey there! I’m <strong>Ron McCune</strong>, an IT professional and cybersecurity enthusiast with a deep passion for problem-solving and technology.</p>
+            
+            <p>I'm currently pursuing my **Bachelor of Science in Information Technology (BSIT)** at **Kent State University**, with a strong focus on **cybersecurity** and **system administration**. My goal is to build secure, efficient, and innovative digital solutions that help businesses and individuals stay ahead in a rapidly evolving tech landscape.</p>
+
+            <!-- Expanded Journey Section -->
+            <h3>My Journey Into IT</h3>
+            <p>Technology has always been more than just a career path for me—it's a **passion**. I started out with a curiosity for how things work, which led me to explore networking, ethical hacking, and web development. Over time, I honed my skills through hands-on projects, coursework, and real-world problem-solving.</p>
+            <p>I want to specialize in **IT security, networking, and troubleshooting**—helping businesses strengthen their digital defenses while ensuring smooth and efficient system operations.</p>
+
+<section class="education-section">
+    <h3>🎓 Education & Coursework</h3>
+    <p>I’m currently working toward my **Bachelor of Science in Information Technology (BSIT)** at **Kent State University - Trumbull Campus** with a concentration in **Application Development**.</p>
+
+    <h4>Relevant Coursework:</h4>
+    <ul>
+        <li>✔ **Visual Basic Programming** - Learning structured programming concepts.</li>
+        <li>✔ **Operating Systems & Networking** - Understanding OS functionality & network infrastructure.</li>
+        <li>✔ **Cyber Ethics in IT** - Studying ethical implications of cybersecurity & data privacy.</li>
+        <li>✔ **Introduction to Website Technology** - Hands-on web development using HTML, CSS, and JavaScript.</li>
+        <li>✔ **Computer Assembly & Configuration** - Hardware troubleshooting and system building.</li>
+    </ul>
+</section>
+
+            <!-- Skills & Expertise Section -->
+            <h3>What I Bring to the Table</h3>
             <ul>
-                <li>Cybersecurity and Ethical Hacking</li>
-                <li>Web Development and Design</li>
-                <li>Riding my motorcycle and kayaking with my dog</li>
-                <li>Exploring new technologies and IT solutions</li>
+                <li>🔹 **Cybersecurity & Ethical Hacking** – Protecting systems, identifying vulnerabilities, and strengthening security.</li>
+                <li>🔹 **IT & Network Administration** – Managing servers, troubleshooting systems, and optimizing network performance.</li>
+                <li>🔹 **Web Development** – Creating clean, efficient, and responsive websites using HTML, CSS, and JavaScript.</li>
+                <li>🔹 **Problem-Solving & Critical Thinking** – Tackling complex challenges with a logical, hands-on approach.</li>
+                <li>🔹 **Continuous Learning & Innovation** – Staying ahead of the latest tech trends and constantly improving my skill set.</li>
             </ul>
-            <p>Feel free to connect with me to learn more or collaborate on exciting projects!</p>
+
+            <!-- Fun Fact / Personal Touch -->
+            <h3>Beyond the Screen</h3>
+            <p>When I’m not diving into cybersecurity challenges or coding, you’ll probably find me **kayaking, riding my motorcycle, or exploring new tech innovations**. I believe in a strong balance between work, learning, and enjoying life’s adventures.</p>
+
+            <!-- Call to Action -->
+            <h3>Let’s Connect</h3>
+            <p>I’m always open to new opportunities, collaborations, and tech discussions. If you're looking for someone passionate about **cybersecurity, IT solutions, and innovation**, let's talk!</p>
+            <p>📩 **Email:** <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
         </section>
     </main>
 
@@ -55,9 +93,22 @@
         <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
         <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
+
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+
 </body>
 </html>
-<!-- 
+
+<!--
    ───── ByteShifter ───── 
    Crafted with 💻 & ☕ 
    https://github.com/Rmccune85
