@@ -1,23 +1,30 @@
-/*  
+/*   
     Author: Ron McCune  
     File: styles.css  
     Date: 02/23/2025  
-    Description: Styles for personal portfolio website with responsive design.  
+    Description: Styles for personal portfolio website with a fixed footer at the bottom of the page.
 */
 
 /* ===========================
    General Styles
 =========================== */
-body {
-    font-family: 'Poppins', Arial, sans-serif; /* Main font for consistency across devices */
-    background-color: #f4f4f4; /* Light gray background for contrast */
-    color: #333; /* Dark gray text color for readability */
-    padding: 0;
+* {
     margin: 0;
-    line-height: 1.6; /* Improved text spacing */
-    box-sizing: border-box; /* Consistent box-sizing across all elements */
-    overflow-x: hidden; /* Prevents horizontal scroll on mobile */
-    padding-bottom: 80px; /* Space for fixed footer */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+    /* Ensures full-page layout */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* ===========================
@@ -25,31 +32,20 @@ body {
 =========================== */
 header {
     text-align: center;
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient for modern look */
+    background: linear-gradient(45deg, #007bff, #0056b3);
     color: white;
     padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Keeps header on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
 }
 
-/* ===========================
-   Navigation Styles
-=========================== */
 header nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin: 10px 0;
-    flex-wrap: wrap; /* Wraps links on smaller screens */
-}
-
-header nav ul li {
-    display: inline-block;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
 header nav ul li a {
@@ -58,30 +54,28 @@ header nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-    display: block;
+    transition: background 0.3s;
 }
 
 header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ===========================
    Profile Image Styles
 =========================== */
 .profile-image {
-    border-radius: 50%; /* Circular profile image */
+    border-radius: 50%;
     width: 90px;
     height: 90px;
-    object-fit: cover; /* Maintains aspect ratio */
+    object-fit: cover;
     border: 3px solid white;
     transition: transform 0.3s ease;
     margin: 0 auto;
 }
 
 .profile-image:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
 }
 
 /* ===========================
@@ -95,10 +89,18 @@ main {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+    
+    /* Allows main to take up all available space */
+    flex-grow: 1;
+}
+
+/* Adds spacing between content and footer */
+.page-buffer {
+    height: 40px; /* Adjust this value to control the buffer size */
 }
 
 /* ===========================
-   Footer Styles
+   Footer Styles (Fixed at Bottom)
 =========================== */
 footer {
     text-align: center;
@@ -108,106 +110,17 @@ footer {
     font-size: 14px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-
-/* ===========================
-   Project Cards
-=========================== */
-.projects-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.project-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    max-width: 90%;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Zoom effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.project-card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.project-card h3 {
-    color: #007bff;
-    font-size: 22px;
-    margin: 15px 0 10px;
-}
-
-.project-card a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    background: #007bff;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    background: #0056b3;
+    
+    /* Stays at the bottom when content is short */
+    margin-top: auto;
 }
 
 /* ===========================
    Responsive Design for Mobile
 =========================== */
 @media only screen and (max-width: 600px) {
-    nav ul {
+    header nav ul {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .project-card {
-        width: 100%; 
-    }
-
-    .dice-display {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .dice-face {
-        width: 25%;
-        margin-bottom: 10px;
-    }
-
-    .dice-face img {
-        width: 80%;
-        height: auto;
-    }
-}
-
-/* ===========================
-   Responsive Design for Tablets
-=========================== */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
-        justify-content: space-around;
-    }
-
-    .project-card {
-        width: 45%; /* Two-column layout on tablets */
     }
 }
 
