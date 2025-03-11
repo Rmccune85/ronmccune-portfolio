@@ -159,9 +159,9 @@ footer {
 }
 
 .project-card img {
-    width: 100%;
+    width: 25%;
     height: auto;
-    max-height: 180px;
+    max-height: 45px;
     object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
