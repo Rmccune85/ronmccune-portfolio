@@ -131,11 +131,14 @@ footer {
    Project Cards
 =========================== */
 .projects-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic grid */
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
 }
 
 .project-card {
