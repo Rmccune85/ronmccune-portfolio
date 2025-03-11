@@ -103,6 +103,15 @@ nav ul li a:hover {
     object-fit: cover;
     border-radius: 8px;
 }
+.project-card img {
+    width: 80%; /* Adjusts the width relative to the container */
+    max-width: 200px; /* Ensures it doesn't get too large */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
 
 /* Project Titles */
 .project-card h3 {
