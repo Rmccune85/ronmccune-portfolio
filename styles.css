@@ -4,235 +4,146 @@
     Date: 02/23/2025  
     Description: Styles for personal portfolio website with responsive design.  
 */
-
-/* ===========================
-   General Styles
-=========================== */
+/* ============================
+   Global Styles - Modern Look
+============================ */
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* Main font for consistency across devices */
-    background-color: #f4f4f4; /* Light gray background for contrast */
-    color: #333; /* Dark gray text color for readability */
-    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: #ffffff;
     margin: 0;
-    line-height: 1.6; /* Improved text spacing */
-    box-sizing: border-box; /* Consistent box-sizing across all elements */
-    overflow-x: hidden; /* Prevents horizontal scroll on mobile */
-    padding-bottom: 80px; /* Space for fixed footer */
+    padding: 0;
+    text-align: center;
 }
 
-/* ===========================
-   Header Styles
-=========================== */
+/* ============================
+   Header & Navbar
+============================ */
 header {
+    background: #1f1f1f;
+    padding: 20px;
     text-align: center;
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient for modern look */
-    color: white;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     position: sticky;
     top: 0;
-    z-index: 1000; /* Keeps header on top */
     width: 100%;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
 }
 
-/* ===========================
-   Navigation Styles
-=========================== */
-header nav ul {
+header h1 {
+    font-size: 28px;
+    color: #f8d210;
+}
+
+header h2 {
+    font-size: 16px;
+    color: #bbbbbb;
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 10px 0;
-    flex-wrap: wrap; /* Wraps links on smaller screens */
+    gap: 15px;
+    margin-top: 10px;
 }
 
-header nav ul li {
+nav ul li {
     display: inline-block;
 }
 
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-    display: block;
+    transition: background 0.3s ease;
 }
 
-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
-    color: white;
-}
-/* Updated color styles for professional look */
-.red-text {
-    color: #c82333 !important; /* Darker red for headers */
-    font-weight: bold;
+nav ul li a:hover {
+    background-color: #f8d210;
+    color: #121212;
 }
 
-.blue-text {
-    color: #003366 !important; /* Muted blue for highlights */
-    font-weight: bold;
-}
-.deep blue-text {
-    color: #0056b3 !important; /* Muted blue for highlights */
-    font-weight: bold;
-}
-
-/* ===========================
-   Profile Image Styles
-=========================== */
-.profile-image {
-    border-radius: 50%; /* Circular profile image */
-    width: 90px;
-    height: 90px;
-    object-fit: cover; /* Maintains aspect ratio */
-    border: 3px solid white;
-    transition: transform 0.3s ease;
-    margin: 0 auto;
-}
-
-.profile-image:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-}
-
-/* ===========================
-   Main Content Section
-=========================== */
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
-
-/* ===========================
-   Footer Styles (Fixed at Bottom)
-=========================== */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-    font-size: 14px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    
-    /* Stays at the bottom when content is short */
-    margin-top: auto;
-}
-
-/* ===========================
-   Project Cards
-=========================== */
+/* ============================
+   Projects Section
+============================ */
 .projects-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic grid */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
     padding: 40px;
     justify-content: center;
     align-items: center;
 }
 
-}
-
+/* Modern Project Cards */
 .project-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    max-width: 90%;
-    text-align: center;
+    background: #1e1e1e;
     padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin: auto;
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Zoom effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-.project-card img {
+/* Project Images */
+.project-image {
     width: 100%;
     height: auto;
-    max-height: 180px;
+    max-height: 200px;
     object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 8px;
 }
 
-
+/* Project Titles */
 .project-card h3 {
-    color: #007bff;
     font-size: 22px;
-    margin: 15px 0 10px;
+    color: #f8d210;
+    margin-top: 10px;
 }
 
+/* Project Descriptions */
+.project-card p {
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+/* Project Buttons */
 .project-card a {
     display: inline-block;
-    text-decoration: none;
-    color: white;
-    background: #007bff;
     padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s ease;
+    background: #f8d210;
+    color: #121212;
     font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 .project-card a:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: #ffcc00;
 }
 
-
-/* ===========================
-   Responsive Design for Mobile
-=========================== */
-@media only screen and (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .project-card {
-        width: 100%; 
-    }
-
-    .dice-display {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .dice-face {
-        width: 25%;
-        margin-bottom: 10px;
-    }
-
-    .dice-face img {
-        width: 80%;
-        height: auto;
-    }
+/* ============================
+   Footer
+============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f1f;
+    color: #bbbbbb;
+    font-size: 14px;
+    box-shadow: 0px -4px 10px rgba(255, 255, 255, 0.1);
 }
-
-/* ===========================
-   Responsive Design for Tablets
-=========================== */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
-        justify-content: space-around;
-    }
-
-    .project-card {
-        width: 45%; /* Two-column layout on tablets */
-    }
-
-
 
 /* ===========================
    📌 Signature  
