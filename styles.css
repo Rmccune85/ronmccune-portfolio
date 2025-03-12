@@ -1,3 +1,25 @@
+/*  
+    Author: Ron McCune  
+    File: styles.css  
+    Date: 02/23/2025  
+    Description: Styles for personal portfolio website with responsive design.  
+*/
+
+/* ===========================
+   General Styles
+=========================== */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
+
 /* ===========================
    Header Styles (Compact & Clean)
 =========================== */
@@ -74,3 +96,169 @@ header nav ul li a:hover {
         font-size: 12px; /* Smaller links for mobile */
     }
 }
+
+
+/* ===========================
+   Profile Image Styles
+=========================== */
+.profile-image {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+}
+
+/* ===========================
+   Main Content Section
+=========================== */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* ===========================
+   Footer Styles (Fixed at Bottom)
+=========================== */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+}
+
+/* ===========================
+   Project Cards
+=========================== */
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    color: #007bff;
+    font-size: 22px;
+    margin: 15px 0 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Responsive Design for Mobile
+=========================== */
+@media only screen and (max-width: 600px) {
+    header nav ul {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .projects-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* ===========================
+   Responsive Design for Tablets
+=========================== */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .project-card {
+        width: 45%;
+    }
+}
+
+/* ===========================
+   📌 Signature  
+=========================== */
+/*  
+// ───── ByteShifter ─────  
+// Crafted with 💻 & ☕  
+*/ 
