@@ -3,69 +3,79 @@
     Author: Ron McCune
     File: about.html
     Date: 03/08/2025
-    Description: Designing for Tablet and Desktop Devices.
+    Description: Designing for Tablet and Desktop Devices with a responsive navigation menu.
 -->
 
-<html lang="en">
+<html lang="en"> <!-- Specifies the language for better accessibility and SEO -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Ron McCune</title>
-    <!-- Google Fonts -->
+    <meta charset="UTF-8"> <!-- Defines character encoding for correct text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive on mobile devices -->
+    <title>About Me - Ron McCune</title> <!-- Title of the page shown in the browser tab -->
+
+    <!-- Google Fonts (Rubik for smooth and professional typography) -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- External CSS -->
+
+    <!-- External CSS File for styling -->
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
-       <nav>
-    <!-- Menu Button (Hamburger) -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+        <h1>Ron McCune</h1> <!-- Main title of the page -->
+        <h2>My Journey as a BSIT student</h2> <!-- Subtitle giving more context -->
 
-    <!-- Navigation Links (Hidden by Default) -->
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Menu Button (Hamburger) for mobile navigation -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+            <!-- Navigation Links (Hidden by Default) -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li> <!-- Navigation link to Home -->
+                <li><a href="#">About Me</a></li> <!-- Navigation link to About Me -->
+                <li><a href="#">Projects</a></li> <!-- Navigation link to Projects -->
+                <li><a href="#">Resume</a></li> <!-- Navigation link to Resume -->
+                <li><a href="#">Contact</a></li> <!-- Navigation link to Contact -->
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
+        <!-- About Me Section -->
         <section>
-           <h2><span class="deep blue-text">About Me</span></h2>
+            <h2><span class="deep blue-text">About Me</span></h2> <!-- Section header with colored styling -->
             <p>Welcome! I’m <strong>Ron McCune</strong>, an IT student and cybersecurity enthusiast with a deep passion for technology and problem-solving.</p>
             
             <p>I’m currently pursuing a Bachelor of Science in Information Technology (BSIT) at Kent State University, focusing on cybersecurity and system administration. My goal is to develop strong IT skills, gain hands-on experience, and build secure, efficient, and innovative digital solutions as I grow in the field.</p>
+        </section>
 
-            <!-- Expanded Journey Section -->
-            <h3><span class="blue-text">My Journey Into IT</span></h3>
+        <!-- Expanded Journey Section -->
+        <section>
+            <h3><span class="blue-text">My Journey Into IT</span></h3> <!-- Highlighted subheading -->
             <p>Technology isn’t just a career goal for me—it’s something I’ve always been passionate about. My curiosity about how systems work led me to explore networking, cybersecurity, and web development. Now, I’m actively building my skills through coursework, hands-on projects, and troubleshooting real-world scenarios.</p>
             <p>I’m especially interested in IT security, networking, and problem-solving—learning how to protect systems, optimize performance, and keep everything running smoothly.</p>
-</section>
-<section>
-    <h3><span class="red-text">🎓 Education & Coursework</span></h3>
-    <p>I’m currently pursuing a Bachelor of Science in Information Technology (BSIT) at Kent State University - Trumbull Campus with a concentration in Application Development.</p>
+        </section>
 
-    <h4><span class="blue-text">Relevant Coursework:</span></h4>
-    <ul>
-        <p>✔ Visual Basic Programming – Learning structured programming concepts.</p>
-        <p>✔ Operating Systems & Networking – Understanding OS functionality & network infrastructure.</p>
-        <p>✔ Cyber Ethics in IT – Exploring the ethical side of cybersecurity & data privacy.</p>
-        <p>✔ Introduction to Website Technology – Hands-on web development with HTML, CSS, and JavaScript.</p>
-        <p>✔ Computer Assembly & Configuration – Gaining hardware troubleshooting and system-building experience.</p>
-    </ul>
-</section>
-<section>
-            <!-- Skills & Expertise Section -->
+        <!-- Education & Coursework Section -->
+        <section>
+            <h3><span class="red-text">🎓 Education & Coursework</span></h3>
+            <p>I’m currently pursuing a Bachelor of Science in Information Technology (BSIT) at Kent State University - Trumbull Campus with a concentration in Application Development.</p>
+
+            <h4><span class="blue-text">Relevant Coursework:</span></h4>
+            <ul>
+                <p>✔ Visual Basic Programming – Learning structured programming concepts.</p>
+                <p>✔ Operating Systems & Networking – Understanding OS functionality & network infrastructure.</p>
+                <p>✔ Cyber Ethics in IT – Exploring the ethical side of cybersecurity & data privacy.</p>
+                <p>✔ Introduction to Website Technology – Hands-on web development with HTML, CSS, and JavaScript.</p>
+                <p>✔ Computer Assembly & Configuration – Gaining hardware troubleshooting and system-building experience.</p>
+            </ul>
+        </section>
+
+        <!-- Skills & Expertise Section -->
+        <section>
             <h3><span class="red-text">What I’m Learning & Developing</span></h3>
             <ul>
                 <p>🔹 Cybersecurity & Ethical Hacking – Learning how to identify vulnerabilities and strengthen system security.</p>
@@ -74,25 +84,38 @@
                 <p>🔹 Problem-Solving & Critical Thinking – Tackling challenges with a structured, hands-on approach.</p>
                 <p>🔹 Continuous Learning & Growth – Keeping up with new technologies and improving my skill set through hands-on work.</p>
             </ul>
+        </section>
 
-            <!-- Fun Fact / Personal Touch -->
-            <h3><span class="blue-text">Beyond the Screen</span></h3>
+        <!-- Personal Interests Section -->
+        <section>
+            <h3><span class="blue-text">Beyond the Screen</span></h3> <!-- Section highlighting personal interests -->
             <p>When I’m not studying IT, troubleshooting systems, or coding, you’ll probably find me out on the water kayaking, riding my motorcycle, or checking out the latest tech innovations. I believe in balancing learning, personal growth, and making the most of life’s adventures.</p>
+        </section>
 
-            <!-- Call to Action -->
+        <!-- Call to Action / Contact Section -->
+        <section>
             <h3><span class="blue-text">Let’s Connect</span></h3>
             <p>I’m always open to discussions, collaborations, and learning opportunities. If you're passionate about cybersecurity, IT solutions, and innovation, let’s talk!</p>
             <p>📩 **Email:** <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
         </section>
     </main>
 
-<!-- Buffer to prevent content from sticking to footer -->
-<div class="page-buffer"></div>
+    <!-- Buffer to prevent content from sticking to the footer -->
+    <div class="page-buffer"></div>
+
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> <!-- Copyright notice -->
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Email contact -->
     </footer>
+
+    <!-- JavaScript to Handle Navigation Toggle -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active'); // Adds or removes "active" class from the navigation
+        }
+    </script>
+
 </body>
 </html>
 
@@ -100,4 +123,4 @@
    ───── ByteShifter ───── 
    Crafted with 💻 & ☕ 
    https://github.com/Rmccune85
---> 
+-->
