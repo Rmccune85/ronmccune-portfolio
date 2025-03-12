@@ -3,182 +3,147 @@
     Author: Ron McCune
     File: projects.html
     Date: 02/23/2025
-    Description: Projects page for Ron McCune's portfolio.
+    Description: Projects page for Ron McCune's portfolio, showcasing IT, cybersecurity, and web development projects.
 -->
-<html lang="en">
+<html lang="en"> <!-- Defines the language of the document for SEO and accessibility -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Ron McCune</title>
-    <!-- Google Fonts -->
+    <meta charset="UTF-8"> <!-- Defines character encoding for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on mobile devices -->
+    
+    <title>Projects - Ron McCune</title> <!-- Sets the browser tab title -->
+
+    <!-- Google Fonts (Rubik for a clean and professional look) -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- External CSS -->
+
+    <!-- External CSS File for styling -->
     <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-       
-        <h1>Ron McCune</h1>
-        <h2>My Journey as a BSIT student</h2>
-        <nav>
-    <!-- Menu Button (Hamburger) -->
-    <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+        <h1>Ron McCune</h1> <!-- Displays the main title -->
+        <h2>My Journey as a BSIT student</h2> <!-- Subtitle providing context -->
 
-    <!-- Navigation Links (Hidden by Default) -->
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+        <!-- Navigation Menu -->
+        <nav>
+            <!-- Menu Button (Hamburger) for mobile navigation -->
+            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+            <!-- Navigation Links (Hidden by Default) -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li> <!-- Link to Home page -->
+                <li><a href="#">About Me</a></li> <!-- Link to About Me page -->
+                <li><a href="#">Projects</a></li> <!-- Link to Projects page -->
+                <li><a href="#">Resume</a></li> <!-- Link to Resume page -->
+                <li><a href="#">Contact</a></li> <!-- Link to Contact page -->
+            </ul>
+        </nav>
     </header>
 
     <!-- Main Content Section -->
     <main class="project-section">
-        <h2 class="highlight-text"><span class="deep blue-text">My Projects</span></h2>
+        <h2 class="highlight-text"><span class="deep blue-text">My Projects</span></h2> <!-- Section title with styling -->
         <p>Welcome to my project showcase! Here, you'll find a collection of my work in IT, web development, and cybersecurity. These projects highlight my learning process, problem-solving skills, and ability to build functional applications.</p>
 
-        <!-- Why These Projects Matter -->
+        <!-- Why These Projects Matter Section -->
         <section class="project-intro">
             <h3><span class="red-text">Why These Projects Matter</span></h3>
             <p>Each project represents a step in my journey as a developer and IT student. From improving problem-solving skills to applying fundamental cybersecurity principles, these hands-on experiences are helping me build my technical knowledge and grow as a developer.</p>
         </section>
 
-       
-       <!-- Links to GitHub Projects -->
-       <section class="project-section">
+        <!-- Projects Section -->
+        <section class="project-section">
+            <!-- Secure Password Manager Project -->
+            <div class="project-card">
+                <img class="project-image" src="password-manager.jpg" alt="Secure Password Manager"> <!-- Project image -->
+                <h3 class="project-description">Secure Password Manager</h3> <!-- Project title -->
+                <a class="project-link" href="https://github.com/Rmccune85/Secure-Password-Manager/releases/download/v1.0/password_manager.exe" target="_blank">Download Now</a>
+                <p class="project-description">
+                    A simple yet powerful tool to keep your passwords safe. This Secure Password Manager
+                    encrypts and stores your credentials locally using AES encryption and an SQLite database.
+                </p>
 
-           <div class="project-card">
-    <img class="project-image" src="password-manager.jpg" alt="Secure Password Manager">
-    <h3 class="project-description">Secure Password Manager</h3>
-    <a class="project-link" href="https://github.com/Rmccune85/Secure-Password-Manager/releases/download/v1.0/password_manager.exe" target="_blank">Download Now</a>
-    <p class="project-description">
-        A simple yet powerful tool to keep your passwords safe. This Secure Password Manager
-        encrypts and stores your credentials locally using AES encryption and an SQLite database.
-        No cloud storage—just **secure, offline protection** for your passwords.
-    </p>
+                <p class="project-features"><strong>Key Features:</strong></p>
+                <ul class="feature-list">
+                    <p>🔐 <strong>Strong Encryption</strong> – Protects your passwords with AES encryption.</p>
+                    <p>🔑 <strong>Master Password Security</strong> – Only you can access your saved credentials.</p>
+                    <p>📂 <strong>Local Storage</strong> – Everything is saved on your device, not the cloud.</p>
+                </ul>
+            </div>
 
-    <p class="project-features"><strong>Key Features:</strong></p>
-    <ul class="feature-list">
-        <p>🔐 <strong>Strong Encryption</strong> – Protects your passwords with AES encryption.</p>
-        <p>🔑 <strong>Master Password Security</strong> – Only you can access your saved credentials.</p>
-        <p>📂 <strong>Local Storage</strong> – Everything is saved on your device, not the cloud.</p>
-        <p>🎲 <strong>Built-in Password Generator</strong> – Create secure, random passwords with ease.</p>
-        <p>🖥 <strong>Simple & Lightweight</strong> – Runs in the command line with no extra setup.</p>
-    </ul>
-</div>
+            <!-- Hangman Game Project -->
+            <div class="project-card">
+                <img class="project-image" src="hangman.jpg" alt="Play Hangman">
+                <h3 class="project-description">Hangman Game</h3>
+                <a class="project-link" href="https://rmccune85.github.io/hangman/" target="_blank">Play Now</a>
+                <p class="project-description">A web-based word-guessing game where players try to guess a secret word before running out of attempts.</p>
+            </div>
 
+            <!-- Addition Game Project -->
+            <div class="project-card">
+                <img class="project-image" src="addition-game-screenshot.png" alt="Addition Game">
+                <h3 class="project-description">Addition Solution</h3>
+                <a class="project-link" href="https://rmccune85.github.io/addition-solution/" target="_blank">Play Now</a>
+                <p>A fun math game that challenges users to solve random addition problems.</p>
+            </div>
 
-    <div class="project-card">
-        <img class="project-image" src="hangman.jpg" alt="Play Hangman">
-        <h3 class="project-description">hangman</h3>
-        <a class="project-link" href="https://rmccune85.github.io/hangman/" target="_blank">Play Now</a>
-        <p class="project-description">The Interactive Hangman Game is a web-based word-guessing game that challenges players to guess a secret word before running out of attempts.</p>
+            <!-- Calculator Project -->
+            <div class="project-card">
+                <img class="project-image" src="calculator.jpg" alt="calculator">
+                <h3 class="project-description">Calculator</h3>
+                <a class="project-link" href="https://rmccune85.github.io/calculator/" target="_blank">Use Calculator</a>
+                <p>A sleek and easy-to-use calculator for quick arithmetic calculations.</p>
+            </div>
 
-    <p class="project-features"><strong>Key Features:</strong></p>
-    <ul class="feature-list">
-        <p>🎭 <strong>Classic Hangman Gameplay</strong> – Guess the hidden word before you run out of chances.</p>
-        <p>⏳ <strong>Countdown Timer</strong> – Adds excitement and urgency to each guess.</p>
-        <p>💀 <strong>Interactive Losing Effect</strong> – The screen shakes, and skulls fall when you lose.</p>
-        <p>🎉 <strong>Winning Celebration</strong> – Confetti explodes when you win.</p>
-        <p>🎮 <strong>Keyboard Shortcuts</strong> – Press "Enter" to submit guesses and start the game.</p>
-    </ul>
-</div>
+            <!-- Dice Roll Game Project -->
+            <div class="project-card">
+                <img class="project-image" src="dice.jpg" alt="Roll Dice Game">
+                <h3 class="project-description">Roll Dice Game</h3>
+                <a class="project-link" href="https://rmccune85.github.io/roll-dice/" target="_blank">Play Now</a>
+                <p>A virtual dice roller that allows users to roll six dice and track the frequency of each face.</p>
+            </div>
 
-           
-    <div class="project-card">
-        <img class="project-image" src="addition-game-screenshot.png" alt="addition-solution">
-        <h3 class="project-description">addition-solution</h3>
-        <a class="project-link" href="https://rmccune85.github.io/addition-solution/" target="_blank">Play Now</a>
-        <p>The Interactive Addition Game is a web-based application designed to help users enhance their math skills in a fun and engaging way. It generates random numbers, challenges users to solve them, and provides real-time feedback.</p>
-       <p><span class="dark blue-text">  Key Features:</strong></p>
+            <!-- Grade Calculator Project -->
+            <div class="project-card">
+                <img class="project-image" src="grade-calculator.jpg" alt="Grade Calculator">
+                <h3 class="project-description">Grade Calculator</h3>
+                <a class="project-link" href="https://rmccune85.github.io/grade-calculator/" target="_blank">Calculate Now</a>
+                <p>An online tool that helps students quickly determine their grades.</p>
+            </div>
+        </section>
+
+        <!-- What's Next? Section -->
+        <section>
+            <h2>🚀 What’s Next?</h2>
+            <p>I'm always learning and working on new projects to expand my skills. Here are a few upcoming ideas I’m excited about:</p>
             <ul>
-                <p>🧮 Dynamic Math Challenges – Generates endless unique problems.</p>
-                <p>🧠 Real-Time Answer Validation – Provides instant feedback.</p>
-                <p>📱 Responsive UI – Works seamlessly on desktop and mobile devices.</p>
-                <lp>🎯 Engaging Learning Experience – Makes math practice interactive and enjoyable.</p>
+                <p>🛡 <strong>Cybersecurity Exploration</strong> – Developing a tool to enhance password security and encryption.</p>
+                <p>🌍 <strong>Portfolio Expansion</strong> – Adding interactive elements and live coding examples.</p>
+                <p>🖥 <strong>Full-Stack Web App</strong> – Exploring backend functionality with database integration.</p>
             </ul>
-    </div>
+        </section>
+    </main>
 
-    <div class="project-card">
-        <img class="project-image" src="calculator.jpg" alt="calculator">
-        <h3 class="project-description">Calculator</h3>
-        <a class="project-link" href="https://rmccune85.github.io/calculator/" target="_blank">Use Calculator</a>
-        <p>This Custom-Built Calculator is a sleek, easy-to-use application designed for basic arithmetic operations. It offers a clean and intuitive interface allowing users to perform quick calculations without distractions.</p>
-
-            <p><span class="dark blue-text">Key Features:</span></p>
-            <ul>
-                <p>🔢 Supports Core Arithmetic Functions – Add, subtract, multiply, divide.</p>
-                <p>⚡ Instant Results – Real-time calculations without lag.</p>
-                <p>📱 Fully Responsive Design – Works smoothly across different screen sizes.</p>
-                <p>🔍 Error Handling – Prevents incorrect inputs and calculations.</p>
-            </ul>
-    </div>
-
-    <div class="project-card">
-        <img class="project-image" src="dice.jpg" alt="Roll Dice Game">
-        <h3 class="project-description">Roll Dice Game</h3>
-        <a class="project-link" href="https://rmccune85.github.io/roll-dice/" target="_blank">Play Now</a>
-        <p>The Virtual Dice Roller is a web-based application that lets users **roll six dice at once** and track the frequency of each face over multiple rolls.</p>
-
-            <p><span class="dark blue-text">Key Features:</span></p>
-            <ul>
-                <p>🎲 Real-Time Roll Simulation – Uses JavaScript’s `Math.random()` function to generate fair, randomized rolls.</p>
-                <p>🎲 Interactive User Input – Allows users to roll as many times as they want and track results dynamically.</p>
-                <p>🎲 Engaging UI – Displays dice faces visually, making it easy to see results at a glance.</p>
-                <p>🎲 Probability Learning Tool – A great way to explore randomness and statistics interactively.</p>
-            </ul>
-    </div>
-
-    <!-- Price per Square Foot Project Card -->
-    <div class="project-card">
-        <img class="project-image" src="Price per Square Foot.jpg" alt="Price per Square Foot">
-        <h3 class="project-description">Price per Square Foot</h3>
-        <a class="project-link" href="https://rmccune85.github.io/price-per-sq-ft-project/" target="_blank">Calculate Now</a>
-    </div>
-
-           <!-- grade-calculator Card -->
-    <div class="project-card">
-        <img class="project-image" src="grade-calculator.jpg" alt="grade_calculator">
-        <h3 class="project-description">Grade Calculator</h3>
-        <a class="project-link" href="https://rmccune85.github.io/grade-calculator/" target="_blank">Calculate Now</a>
-    </div>
-    
-
-</section>
-        
-<section>
- <!-- What's Next? -->
-       
-<section>
-    <h2>🚀 What’s Next?</h2>
-<p>I'm always learning and working on new projects to expand my skills. Here are a few upcoming ideas I’m excited about:</p>
-
-<ul>
-    <p>🛡 <strong>Cybersecurity Exploration</strong> – Learning about <strong>password security and encryption techniques</strong> by developing a beginner-friendly tool.</p>
-    <p>🌍 <strong>Portfolio Expansion</strong> – Enhancing my portfolio with <strong>interactive elements</strong> and <strong>live coding examples</strong> to showcase my progress.</p>
-    <p>🖥 <strong>Full-Stack Web App</strong> – Exploring <strong>database integration and backend functionality</strong> in a hands-on web-based project.</p>
-</ul>
-
-<p>Stay tuned for more updates! If you're interested in collaborating or have ideas, feel free to reach out.</p>
-
-<h2>🤝 Let’s Build Something Great!</h2>
-<p>I’m always open to learning, discussions, and new opportunities. If you’d like to collaborate or share feedback, let’s connect!</p>
-</section>
-    </main>       
-  
-<!-- Footer Section -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> <!-- Copyright notice -->
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Contact email -->
     </footer>
+
+    <!-- JavaScript to Handle Navigation Toggle -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active'); // Adds or removes "active" class from the navigation
+        }
+    </script>
+
 </body>
 </html>
-<!-- 📌 Signature  
-// ───── ByteShifter ─────  
-// Crafted with 💻 & ☕  -->
+
+<!-- 
+   ───── ByteShifter ───── 
+   Crafted with 💻 & ☕ 
+   https://github.com/Rmccune85
+-->
