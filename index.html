@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <!-- Declares this is an HTML5 document -->
+<!-- 
+    Author: Ron McCune
+    File: index.html
+    Date: 03/08/2025
+    Description: Designing for Tablet and Desktop Devices.
+-->
 <html lang="en">
 <!-- Opens the HTML document and sets the language to English -->
 
@@ -36,32 +42,48 @@
 
         <!-- Navigation Section -->
         <nav>
+            <div class="nav-container">
             <!-- Mobile Menu Button (Hamburger Menu) -->
             <div class="menu-toggle">☰ Menu</div>
             
             <!-- List of navigation links -->
             <ul class="nav-links">
-                <li><a href="#">Home</a></li> <!-- Link to the Home page -->
-                <li><a href="#">About Me</a></li> <!-- Link to the About Me page -->
+                <li><a href="#">Home.html</a></li> <!-- Link to the Home page -->
+                <li><a href="#">About Me.html</a></li> <!-- Link to the About Me page -->
                 <li><a href="#">Projects</a></li> <!-- Link to the Projects page -->
                 <li><a href="#">Resume</a></li> <!-- Link to the Resume page -->
                 <li><a href="#">Contact</a></li> <!-- Link to the Contact page -->
             </ul>
+                </div>
         </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
         <!-- Welcome Section -->
-        <section>
-            <h2>Welcome to My Portfolio</h2>
-            <p>
-                Hi, I’m <strong>Ron McCune</strong> – a cybersecurity enthusiast and IT student currently 
-                building my skills in network security, troubleshooting, and web development.
-            </p>
-            <p>
-                This portfolio showcases my progress, projects, and commitment to continuous learning.
-            </p>
+        <section class="intro-section">
+            <h2 class="section-title red-bold">Welcome to My Portfolio</h2>
+            <p>Hi, I’m Ron McCune – a cybersecurity enthusiast and IT student currently building my skills in network security, troubleshooting, and web development. My journey in IT is driven by curiosity, hands-on learning, and the goal of mastering cybersecurity concepts.</p>
+            <br>
+            <p>This portfolio showcases my progress, projects, and commitment to continuous learning. Whether you're an employer, mentor, or fellow tech enthusiast, I invite you to explore my work as I develop my expertise in IT and security.</p>
+
+            <p>I’m always open to learning opportunities, collaboration, and discussions about technology. Let’s connect!</p>
+        </section>
+
+        <!-- What I Do Section -->
+        <section class="what-i-do">
+            <h2 class="section-title">What I Do</h2>
+            <p>🔹 Learning Cybersecurity & Network Security – Studying ethical hacking, penetration testing, and best practices to understand how to protect digital assets.</p>
+            <p>🔹 Building IT Knowledge & Troubleshooting Skills – Learning to identify, diagnose, and resolve system issues with a focus on efficiency and reliability.</p>
+            <p>🔹 Exploring Web Development – Developing foundational skills in HTML, CSS, and JavaScript to create clean, responsive, and functional websites.</p>
+            <p>🔹 Committed to Continuous Learning – Staying up to date with emerging tech trends and sharpening my skills through hands-on projects, coursework, and certifications.</p>
+        </section>
+<br>
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Let's Connect!</h2>
+            <p>I'm always open to discussing new opportunities, collaborations, and tech innovations. Feel free to reach out!</p>
+            <p>📩 <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
         </section>
     </main>
 
@@ -79,12 +101,12 @@
         // Waits until the webpage loads before running the script
         document.addEventListener("DOMContentLoaded", function () {
             // Selects the menu button and the navigation links
-            const menuToggle = document.querySelector(".menu-toggle");
+            const hamburger = document.querySelector(".hamburger");
             const navLinks = document.querySelector(".nav-links");
 
             // Adds a click event to toggle the visibility of the navigation menu
-            menuToggle.addEventListener("click", function () {
-                navLinks.classList.toggle("active"); // Adds/removes "active" class to show/hide menu
+           hamburger.addEventListener("click", function () {
+                nnavLinks.classList.toggle("active"); // Adds/removes "active" class to show/hide menu
             });
         });
     </script>
