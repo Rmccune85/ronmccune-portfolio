@@ -1,99 +1,93 @@
 <!DOCTYPE html>
-<!-- 
-    Author: Ron McCune
-    File: index.html
-    Date: 03/08/2025
-    Description: Portfolio homepage for Ron McCune, showcasing IT skills, projects, and experience.
--->
-
-<html lang="en"> <!-- Specifies the language of the document for accessibility and SEO -->
+<!-- Declares this is an HTML5 document -->
+<html lang="en">
+<!-- Opens the HTML document and sets the language to English -->
 
 <head>
-    <title>Ron McCune - Portfolio</title> <!-- Sets the title displayed in the browser tab -->
-    
-    <meta charset="UTF-8"> <!-- Defines character encoding to support all text formats -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
+    <title>Ron McCune - Portfolio</title>
+    <!-- Sets the title displayed on the browser tab -->
 
-    <!-- Google Font (Poppins for a modern and clean look) -->
+    <meta charset="UTF-8">
+    <!-- Specifies character encoding to support all text formats (UTF-8 is standard) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website responsive (adjusts to different screen sizes) -->
+
+    <!-- Google Font (Poppins for a clean and modern look) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
-    <!-- External CSS File for styling -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- Links to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Everything inside <body> is visible on the webpage -->
 
     <!-- Header Section -->
     <header>
-        <!-- Profile Image (Kayaking Photo) -->
+        <!-- Displays a circular profile image -->
         <img class="profile-image" src="kayaking.jpg" alt="Ron McCune Kayaking">
         
-        <h1>Ron McCune</h1> <!-- Main title of the page -->
-        <h2>My Journey as a BSIT student</h2> <!-- Subtitle to describe portfolio purpose -->
+        <!-- Displays the main title of the page -->
+        <h1>Ron McCune</h1>
 
-        <!-- Navigation Menu -->
+        <!-- Displays a subtitle describing the portfolio's purpose -->
+        <h2>My Journey as a BSIT Student</h2>
+
+        <!-- Navigation Section -->
         <nav>
-            <!-- Menu Button (Hamburger) for mobile navigation -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-
-            <!-- Navigation Links (Hidden by Default) -->
+            <!-- Mobile Menu Button (Hamburger Menu) -->
+            <div class="menu-toggle">☰ Menu</div>
+            
+            <!-- List of navigation links -->
             <ul class="nav-links">
-                <li><a href="#">Home</a></li> <!-- Link to Home page -->
-                <li><a href="#">About Me</a></li> <!-- Link to About Me page -->
-                <li><a href="#">Projects</a></li> <!-- Link to Projects page -->
-                <li><a href="#">Resume</a></li> <!-- Link to Resume page -->
-                <li><a href="#">Contact</a></li> <!-- Link to Contact page -->
+                <li><a href="#">Home</a></li> <!-- Link to the Home page -->
+                <li><a href="#">About Me</a></li> <!-- Link to the About Me page -->
+                <li><a href="#">Projects</a></li> <!-- Link to the Projects page -->
+                <li><a href="#">Resume</a></li> <!-- Link to the Resume page -->
+                <li><a href="#">Contact</a></li> <!-- Link to the Contact page -->
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
     <main>
-        <!-- Introduction Section -->
+        <!-- Welcome Section -->
         <section>
-            <h2><span class="deep blue-text">Welcome to My Portfolio</span></h2> <!-- Section title with styled text -->
-            <p>Hi, I’m <strong>Ron McCune</strong> – a cybersecurity enthusiast and IT student currently building my skills in network security, troubleshooting, and web development. My journey in IT is driven by curiosity, hands-on learning, and the goal of mastering cybersecurity concepts.</p>
-            
-            <p>This portfolio showcases my progress, projects, and commitment to continuous learning. Whether you're an employer, mentor, or fellow tech enthusiast, I invite you to explore my work as I develop my expertise in IT and security.</p>
-
-            <p>I’m always open to learning opportunities, collaboration, and discussions about technology. Let’s connect!</p>
-        </section>
-
-        <!-- What I Do Section -->
-        <section>     
-            <h2 class="section-title"><span class="red-text">What I Do</span></h2> <!-- Section header with styling -->
-            <p>🔹 <strong>Learning Cybersecurity & Network Security</strong> – Studying ethical hacking, penetration testing, and best practices to understand how to protect digital assets.</p>
-            <p>🔹 <strong>Building IT Knowledge & Troubleshooting Skills</strong> – Learning to identify, diagnose, and resolve system issues with a focus on efficiency and reliability.</p>
-            <p>🔹 <strong>Exploring Web Development</strong> – Developing foundational skills in HTML, CSS, and JavaScript to create clean, responsive, and functional websites.</p>
-            <p>🔹 <strong>Committed to Continuous Learning</strong> – Staying up to date with emerging tech trends and sharpening my skills through hands-on projects, coursework, and certifications.</p>
-        </section>
-
-        <!-- Call to Action Section -->
-        <section>
-            <h2><span class="blue-text">Let's Connect!</span></h2> <!-- Call to action heading -->
-            <p>I'm always open to discussing new opportunities, collaborations, and tech innovations. Feel free to reach out!</p>
-            <p>📩 <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Email contact link -->
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                Hi, I’m <strong>Ron McCune</strong> – a cybersecurity enthusiast and IT student currently 
+                building my skills in network security, troubleshooting, and web development.
+            </p>
+            <p>
+                This portfolio showcases my progress, projects, and commitment to continuous learning.
+            </p>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> <!-- Copyright notice -->
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Contact email -->
+        <!-- Copyright Notice -->
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        
+        <!-- Email Contact -->
+        <p>Email: <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
 
     <!-- JavaScript to Handle Navigation Toggle -->
     <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active'); // Adds or removes "active" class from navigation
-        }
+        // Waits until the webpage loads before running the script
+        document.addEventListener("DOMContentLoaded", function () {
+            // Selects the menu button and the navigation links
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+
+            // Adds a click event to toggle the visibility of the navigation menu
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active"); // Adds/removes "active" class to show/hide menu
+            });
+        });
     </script>
 
 </body>
 </html>
-
-<!-- 
-   ───── ByteShifter ───── 
-   Crafted with 💻 & ☕ 
-   https://github.com/Rmccune85
---> 
