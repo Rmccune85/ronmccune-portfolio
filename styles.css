@@ -1,4 +1,4 @@
-/*   
+/*  
     Author: Ron McCune  
     File: styles.css  
     Date: 02/23/2025  
@@ -9,295 +9,162 @@
    General Styles
 =========================== */
 body {
-    font-family: 'Poppins', Arial, sans-serif; /* Sets the main font for the site */
-    background-color: #f4f4f4; /* Light gray background for contrast */
-    color: #333; /* Dark gray text color for readability */
+    font-family: 'Poppins', Arial, sans-serif; /* Sets the font for the site */
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark gray text for readability */
+    margin: 0; /* Removes default margins */
     padding: 0; /* Removes default padding */
-    margin: 0; /* Removes default margin */
-    line-height: 1.6; /* Sets better text spacing */
-    box-sizing: border-box; /* Ensures padding and border are included in total width */
+    line-height: 1.6; /* Improves text spacing */
+    box-sizing: border-box; /* Ensures padding and border don't affect element width */
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    padding-bottom: 80px; /* Adds space for the fixed footer */
 }
 
 /* ===========================
-   Header Styles (Compact & Clean)
+   Header Section
 =========================== */
 header {
-    position: relative; /* Allows the header to scroll with the page */
-    text-align: center; /* Centers text inside the header */
-    background: linear-gradient(45deg, #007bff, #0056b3); /* Gradient blue background */
-    color: white; /* White text color */
-    padding: 8px 0; /* Reduced padding to make the header smaller */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+    text-align: center; /* Centers header content */
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Blue gradient background */
+    color: white; /* White text */
+    padding: 15px 0; /* Adds spacing around header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Soft shadow */
     width: 100%; /* Full width */
-    z-index: 1000; /* Keeps it above other elements */
-      
 }
 
+/* Header Text Styling */
 header h1 {
-    font-size: 22px; /* Sets a smaller font size for the main header */
-    margin: 5px 0; /* Adds minimal spacing */
+    font-size: 24px; /* Sets size for the main title */
+    margin: 5px 0; /* Adjusts spacing */
 }
 
-/* ===========================
-   Navigation Styles
-=========================== */
-header nav ul {
-    list-style: none; /* Removes default bullet points */
-    padding: 0; /* Removes extra padding */
-    display: flex; /* Uses flexbox for better alignment */
-    justify-content: center; /* Centers navigation links */
-    gap: 5px; /* Adds spacing between navigation items */
-    margin: 5px 0; /* Adds spacing above and below */
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+header h2 {
+    font-size: 18px; /* Sets size for subtitle */
+    font-weight: normal; /* Prevents it from being too bold */
 }
-
-header nav ul li {
-    display: inline-block; /* Ensures navigation items align in a row */
-}
-
-header nav ul li a {
-    text-decoration: none; /* Removes underline from links */
-    color: white; /* Sets link text color to white */
-    font-weight: bold; /* Makes links bold */
-    padding: 4px 8px; /* Adds padding for better spacing */
-    border-radius: 3px; /* Rounds link edges slightly */
-    transition: background 0.3s, color 0.3s; /* Adds smooth hover effect */
-    font-size: 14px; /* Sets a readable font size */
-}
-
-header nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Adds a subtle background on hover */
-    color: white; /* Keeps text color white on hover */
-}
-/* Navigation Styling */
-.nav-links {
-    list-style: none; /* Removes default bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* Styling for Mobile Navigation */
-.menu-toggle {
-    display: none; /* Hidden on larger screens */
-    cursor: pointer;
-    font-size: 20px;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-}
-
-/* Styles for Small Screens */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Shows the button on small screens */
-    }
-
-    .nav-links {
-        display: none; /* Hides nav links by default */
-        flex-direction: column;
-        background: #007bff;
-        text-align: center;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 15px 0;
-        z-index: 1000;
-    }
-
-    .nav-links.active {
-        display: flex; /* Shows the menu when active */
-    }
-
-    .nav-links li {
-        width: 100%;
-    }
-
-    .nav-links li a {
-        display: block;
-        padding: 10px;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
-
-    .nav-links li a:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-}
-
 
 /* ===========================
    Profile Image Styles
 =========================== */
 .profile-image {
-    border-radius: 50%; /* Makes profile image circular */
-    width: 90px; /* Sets width of profile image */
-    height: 90px; /* Sets height of profile image */
-    object-fit: cover; /* Ensures image maintains aspect ratio */
-    border: 3px solid white; /* Adds a white border around image */
-    transition: transform 0.3s ease; /* Adds smooth zoom effect on hover */
-    margin: 0 auto; /* Centers image */
+    border-radius: 50%; /* Makes the image circular */
+    width: 100px; /* Controls image width */
+    height: 100px; /* Controls image height */
+    object-fit: cover; /* Ensures the image is not stretched */
+    border: 3px solid white; /* Adds a white border around the image */
 }
 
-.profile-image:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
+/* ===========================
+   Navigation Styles
+=========================== */
+nav {
+    display: flex; /* Aligns navigation items */
+    flex-direction: column; /* Stacks items in a column */
+    align-items: center; /* Centers the menu */
+    padding-top: 10px; /* Adds space above menu */
+}
+
+/* Navigation Links (Hidden by Default for Mobile) */
+.nav-links {
+    list-style: none; /* Removes default bullet points */
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stacks links vertically */
+    width: 100%; /* Ensures full width */
+    text-align: center; /* Centers links */
+    background: #007bff; /* Blue background */
+    padding: 10px 0; /* Adds padding */
+}
+
+/* Show Navigation When Active */
+.nav-links.active {
+    display: flex; /* Displays the menu when clicked */
+}
+
+/* Navigation List Items */
+.nav-links li {
+    margin: 5px 0; /* Adds spacing between links */
+}
+
+/* Navigation Links */
+.nav-links a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* White text */
+    font-weight: bold; /* Makes text bold */
+    padding: 10px; /* Adds padding for easier clicking */
+    display: block; /* Ensures full clickable area */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+/* Navigation Hover Effect */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Adds subtle background on hover */
+}
+
+/* ===========================
+   Mobile Menu Button (Hamburger)
+=========================== */
+.menu-toggle {
+    display: block; /* Visible on mobile */
+    cursor: pointer; /* Clickable */
+    font-size: 20px; /* Large font size */
+    padding: 10px;
+    background: #0056b3; /* Darker blue */
+    color: white;
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    width: 100%;
+}
+
+/* ===========================
+   Desktop Navigation Fix
+=========================== */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hides hamburger menu on larger screens */
+    }
+
+    .nav-links {
+        display: flex !important; /* Always visible on larger screens */
+        flex-direction: row; /* Displays links in a row */
+        justify-content: center; /* Centers navigation */
+        gap: 20px; /* Adds spacing between links */
+        background: none; /* Removes background */
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin: 0; /* Removes extra margin */
+    }
+
+    .nav-links a {
+        padding: 10px 15px; /* Adjusts spacing */
+        font-size: 16px; /* Increases font size */
+    }
 }
 
 /* ===========================
    Main Content Section
 =========================== */
 main {
-    max-width: 800px; /* Limits content width */
-    margin: 20px auto; /* Centers the content */
-    background: white; /* Sets background color to white */
-    padding: 20px; /* Adds padding for better spacing */
-    border-radius: 5px; /* Slightly rounds content edges */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds soft shadow */
-    text-align: left; /* Aligns text to the left */
+    max-width: 800px; /* Sets width for content */
+    margin: 20px auto; /* Centers content */
+    background: white; /* White background */
+    padding: 20px; /* Adds space inside */
+    border-radius: 5px; /* Soft rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: left; /* Aligns text */
 }
 
 /* ===========================
-   Footer Styles (Fixed at Bottom)
+   Footer Styles
 =========================== */
 footer {
-    text-align: center; /* Centers footer content */
-    padding: 10px; /* Adds padding for better spacing */
-    background: #222; /* Dark background color */
-    color: white; /* White text color */
-    font-size: 14px; /* Sets a smaller font size */
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
-    width: 100%; /* Ensures footer spans full width */
-    position: relative; /* Keeps footer at the bottom */
-    bottom: 0; /* Positions footer at the bottom */
-    margin-top: auto; /* Ensures spacing above footer */
+    text-align: center; /* Centers text */
+    padding: 10px; /* Adds space */
+    background: #222; /* Dark background */
+    color: white; /* White text */
+    font-size: 14px; /* Smaller font */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Full width */
 }
-
-/* ===========================
-   Project Cards
-=========================== */
-.projects-section {
-    display: grid; /* Uses grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Makes projects responsive */
-    gap: 20px; /* Adds spacing between projects */
-    padding: 40px; /* Adds padding around projects */
-    justify-content: center; /* Centers project cards */
-    align-items: center; /* Aligns items */
-}
-
-.project-card {
-    background: white; /* Sets background color to white */
-    border-radius: 10px; /* Rounds card edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds soft shadow */
-    width: 300px; /* Sets card width */
-    max-width: 90%; /* Ensures cards are responsive */
-    text-align: center; /* Centers card content */
-    padding: 20px; /* Adds padding inside cards */
-    transition: transform 0.3s, box-shadow 0.3s; /* Adds hover effect */
-    margin-bottom: 20px; /* Adds spacing between cards */
-}
-
-.project-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances hover shadow */
-}
-
-.project-card img {
-    width: 100%; /* Makes images responsive */
-    height: auto; /* Keeps aspect ratio */
-    max-height: none; /* Prevents image cropping */
-    object-fit: contain; /* Ensures proper image fit */
-    border-radius: 5px; /* Rounds image edges slightly */
-    margin-bottom: 10px; /* Adds spacing below images */
-}
-
-/* ===========================
-   Responsive Design for Mobile
-=========================== */
-@media only screen and (max-width: 600px) {
-    header {
-        padding: 6px 0; /* Reduces header padding for smaller screens */
-    }
-
-    header h1 {
-        font-size: 18px; /* Reduces font size for mobile */
-    }
-
-    header nav ul {
-        flex-direction: row; /* Keeps navigation in a row */
-        justify-content: center; /* Centers navigation */
-        flex-wrap: wrap; /* Allows items to wrap */
-        gap: 3px; /* Reduces space between navigation links */
-    }
-
-    header nav ul li a {
-        padding: 6px; /* Adjusts padding for mobile */
-        font-size: 12px; /* Reduces font size for small screens */
-    }
-}
-
-/* ===========================
-   Responsive Design for Tablets
-=========================== */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    nav ul {
-        justify-content: space-around; /* Spaces navigation evenly */
-    }
-
-    .project-card {
-        width: 45%; /* Makes projects display in two columns */
-    }
-}
-/* ===========================
-   Navigation Styles (Dropdown)
-=========================== */
-nav {
-    display: flex; /* Aligns navigation items */
-    justify-content: center; /* Centers the menu */
-    align-items: center; /* Centers items vertically */
-    flex-direction: column; /* Stacks items in a column */
-}
-
-/* Hides navigation links by default */
-.nav-links {
-    display: none; /* Keeps links hidden until menu is clicked */
-    flex-direction: column; /* Stacks links vertically */
-    width: 100%; /* Ensures menu spans the full width */
-    text-align: center; /* Centers the text */
-    background: #007bff; /* Blue background */
-    padding: 10px 0; /* Adds padding inside the dropdown */
-}
-
-/* Show navigation links when the menu is active */
-.nav-links.active {
-    display: flex; /* Makes the menu appear */
-}
-
-/* Menu Button (Hamburger) */
-.menu-toggle {
-    display: block; /* Makes sure the button is visible */
-    cursor: pointer; /* Turns the cursor into a pointer (clickable) */
-    background: #0056b3; /* Darker blue background */
-    color: white; /* White text color */
-    padding: 10px; /* Adds padding for better spacing */
-    font-size: 18px; /* Makes the button text readable */
-    text-align: center; /* Centers the button */
-    width: 100%; /* Ensures full width for easy clicking */
-}
-
-/* ===========================
-   📌 Signature  
-=========================== */
-/*  
-// ───── ByteShifter ─────  
-// Crafted with 💻 & ☕  
-*/
-
