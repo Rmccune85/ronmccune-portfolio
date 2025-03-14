@@ -1,118 +1,127 @@
 <!DOCTYPE html>
 <!-- 
     Author: Ron McCune
-    File: contact.html
-    Date: 02/23/2025
-    Description: Contact Me page for Ron McCune, including contact details, social links, and location.
+    File: resume.html
+    Date: 03/08/2025
+    Description: Designing for Tablet and Desktop Devices.
 -->
 
-<html lang="en"> <!-- Defines the language of the document for better SEO and accessibility -->
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Defines character encoding for proper text rendering -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
-    <title>Contact Me - Ron McCune</title> <!-- Sets the title of the page in the browser tab -->
-
-    <!-- Google Fonts (Rubik for clean, modern typography) -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- External CSS File -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Resume - Ron McCune</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
-
 <body>
+
     <!-- Header Section -->
     <header>
-        <h1>Ron McCune</h1> <!-- Displays the main page title -->
-        <h2>My Journey as a BSIT student</h2> <!-- Subtitle for the header -->
-
-        <!-- Navigation Menu -->
-        <nav>
-            <!-- Menu Button (Hamburger) for mobile navigation -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-
-            <!-- Navigation Links (Hidden by Default) -->
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li> <!-- Link to Home page -->
-                <li><a href="#">About Me</a></li> <!-- Link to About Me page -->
-                <li><a href="#">Projects</a></li> <!-- Link to Projects page -->
-                <li><a href="#">Resume</a></li> <!-- Link to Resume page -->
-                <li><a href="#">Contact</a></li> <!-- Link to Contact page -->
-            </ul>
-        </nav>
+       
+        <h1>Ron McCune</h1>
+        <h2>Passionate About IT & Cybersecurity</h2>
     </header>
 
+    <!-- Navigation Section -->
+    <nav>
+        <div class="nav-container">
+            <!-- Hamburger Icon -->
+            <div class="hamburger">☰</div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Main Content Section -->
-    <main>
-        <!-- Contact Introduction Section -->
-        <section>
-            <h2><span class="deep blue-text">Let's Connect</span></h2> <!-- Section header with styling -->
-            <p>If you’d like to chat about cybersecurity, IT, or potential collaborations, I’d love to connect! Whether it's about new opportunities, project ideas, or just a great tech discussion, feel free to reach out.</p>
-        </section>
-
-        <!-- Contact Information Section -->
-        <section class="contact-info">
-            <h3><span class="red-text">Contact Details</span></h3> <!-- Subheading for contact details -->
+   <main>
+        <section class="resume-section">
+            <h2 class="highlight-text"><span class="deep blue-text">My Resume</span></h2>
+            <p>Below is a summary of my skills, experience, and education. You can also download my full resume in PDF format.</p>
+            
+            <!-- Skills Section -->
+            <h3><span class="blue-text">💡 Skills & Expertise</span></h3>
             <ul>
-                <p>📧 School Email: <a href="mailto:rmccun12@kent.edu">rmccun12@kent.edu</a></p> <!-- Email for school-related contact -->
-                <p>📩 Primary Email: <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Primary personal email -->
-                <p>📱 Mobile: <a href="tel:+13307201097">+1 (330) 720-1097</a></p> <!-- Clickable phone number for direct calls -->
+                <p>🔹 Web Development: HTML, CSS, JavaScript, Visual Studio Code.</p>
+                <p>🔹 Learning Cybersecurity Fundamentals: Network Security, Ethical Hacking (In Progress).</p>
+                <p>🔹 Building IT Support & Troubleshooting Skills: Hardware & Software Basics.</p>
+                <p>🔹 Problem Solving & Critical Thinking: Strong analytical skills.</p>
+                <p>🔹 Version Control & Collaboration: GitHub, Agile methodologies.</p>
             </ul>
         </section>
 
-        <!-- Contact Form Section (Placeholder for future form implementation) -->
-        <section class="contact-form">
-            <h3><span class="blue-text">💬 Prefer to message me directly? Feel free to send me an email anytime!</span></h3>
+           <!-- Work Experience -->
+        <section class="resume-experience">
+            <h3><span class="red-text">💼 Work Experience</span></h3>
+
+            <h4>Inventory Specialist - Great Lakes Cheese</h4>
+            <p><strong>Dates:</strong> May 2022 – Present</p>
+            <ul>
+                <p>✔ Managed and tracked inventory accuracy using **SAP**.</p>
+                <p>✔ Assisted in improving system efficiency and data integrity.</p>
+                <p>✔ Strengthened problem-solving skills while working with SAP and inventory systems.</p>
+            </ul>
+
+            <h4><span class="blue-text">IT & Cybersecurity Projects</span></h4>
+            <p><strong>Dates:</strong> Ongoing</p>
+            <ul>
+                <p>✔ Built interactive web applications using JavaScript, HTML, and CSS.</p>
+                <p>✔ Developed a Virtual Dice Roller to simulate probability outcomes.</p>
+                <p>✔ Created a Custom Calculator for arithmetic operations.</p>
+                <p>✔ Exploring cybersecurity concepts by studying password security and encryption methods.</p>
+            </ul>
         </section>
 
-        <!-- Location Information Section -->
-        <section>
-            <h2><span class="red-text">Location</span></h2> <!-- Location heading -->
-            <p>🎓 Studying at:</p> <!-- Short description of educational background -->
-            <p>Kent State University - Trumbull Campus<br>
-                Pursuing a Bachelor of Science in Information Technology (BSIT)
+        <!-- Education Section -->
+        <section class="resume-education">
+            <h3><span class="red-text">🎓 Education</span></h3>
+            <h4>Kent State University - Trumbull Campus</h4>
+            <p><strong>Degree:</strong> Bachelor of Science in Information Technology (BSIT)</p>
+            <p><strong>Expected Graduation:</strong> 2028 </p>
+            <p>Currently learning the fundamentals of cybersecurity, networking, and IT systems administration..</p>
+
+            <h4><span class="blue-text">Relevant Coursework:</span></h4>
+            <ul>
+                <p>✔ Visual Basic Programming (IT 11002)</p>
+                <p>✔ Survey of Information Technology (IT 11004)</p>
+                <p>✔ Operating Systems & Networking (IT 11005)</p>
+                <p>✔ Intermediate Office Applications (IT 12000)</p>
+                <p>✔ Computer Assembly & Configuration (IT 11009)</p>
+                <p>✔ Cyber Ethics in IT (IT 21007)</p>
+                <p>✔ Introduction to Website Technology (IT 11006) (In Progress)</p>
+            </ul>
+        </section>
+
+           <section class="resume-certifications">
+            <h3><span class="red-text">📜 Certifications</span></h3>
+            <ul>
+                <p>✔ CompTIA A+ (In Progress)</p>
+                <p>✔ Self-Learning Cybersecurity & Ethical Hacking Concepts</p>
+            </ul>
+        </section>
+
+            <!-- Download Resume Section -->
+            <h3><span class="deep blue-text">Download Resume</span></h3>
+            <p>
+                <a href="ron_mccune_resume.pdf" target="_blank" class="project-link">Download PDF</a>
             </p>
-
-            <!-- Embedded Google Maps showing Kent State University - Trumbull Campus -->
-            <iframe 
-                style="width: 100%; border: 0;" 
-                height="450" 
-                loading="lazy" 
-                allowfullscreen 
-                referrerpolicy="no-referrer-when-downgrade" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3092.2789152184785!2d-80.81987862412032!3d41.25322160293141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8833e2c753555555%3A0x0123456789abcdef!2s4314%20Mahoning%20Avenue%20NW%2C%20Warren%2C%20OH%2044483!5e0!3m2!1sen!2sus!4v1700000000000">
-            </iframe>
-        </section>
-
-        <!-- Social Media Links Section -->
-        <section class="social-links">
-            <h3><span class="deep blue-text">Find Me Online</span></h3> <!-- Social media section header -->
-            <p>Want to see what I’m working on? Check out my GitHub, and stay tuned for my LinkedIn profile!</p>
-            <ul>
-                <p>💻 GitHub: <a href="https://github.com/Rmccune85" target="_blank">github.com/Rmccune85</a></p> <!-- Link to GitHub profile -->
-                <p>🔗 LinkedIn: <a href="#" target="_blank">(Coming Soon – Reach out via email for now!)</a></p> <!-- Placeholder for LinkedIn profile -->
-            </ul>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> <!-- Copyright notice -->
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Email contact -->
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
-
-    <!-- JavaScript to Handle Navigation Toggle -->
-    <script>
-        function toggleMenu() {
-            document.querySelector('.nav-links').classList.toggle('active'); // Adds or removes "active" class from the navigation
-        }
-    </script>
 
 </body>
 </html>
-
-<!-- 
-   ───── ByteShifter ───── 
-   Crafted with 💻 & ☕ 
-   https://github.com/Rmccune85
--->
