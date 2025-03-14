@@ -91,19 +91,16 @@
     </footer>
 
     <!-- JavaScript to Handle Navigation Toggle -->
-    <script>
-        // Waits until the webpage loads before running the script
-        document.addEventListener("DOMContentLoaded", function () {
-            // Selects the menu button and the navigation links
-            const hamburger = document.querySelector(".hamburger");
-            const navLinks = document.querySelector(".nav-links");
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
 
-            // Adds a click event to toggle the visibility of the navigation menu
-           hamburger.addEventListener("click", function () {
-                nnavLinks.classList.toggle("active"); // Adds/removes "active" class to show/hide menu
-            });
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
         });
-    </script>
+    });
+</script>
 
 </body>
 </html>
