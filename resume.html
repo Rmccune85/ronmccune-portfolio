@@ -2,72 +2,67 @@
 <!-- 
     Author: Ron McCune
     File: resume.html
-    Date: 02/23/2025
-    Description: Resume page for Ron McCune's portfolio, showcasing skills, experience, and education.
+    Date: 03/08/2025
+    Description: Designing for Tablet and Desktop Devices.
 -->
 
-<html lang="en"> <!-- Specifies language for accessibility and SEO -->
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Defines character encoding to support all text formats -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
-    
-    <title>Resume - Ron McCune</title> <!-- Sets the browser tab title -->
-
-    <!-- Google Fonts (Rubik for a clean and professional look) -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- External CSS File for styling -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Resume - Ron McCune</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
-
 <body>
+
     <!-- Header Section -->
     <header>
-        <h1>Ron McCune</h1> <!-- Displays the main title -->
-        <h2>My Journey as a BSIT student</h2> <!-- Subtitle providing context -->
-
-        <!-- Navigation Menu -->
-        <nav>
-            <!-- Menu Button (Hamburger) for mobile navigation -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-
-            <!-- Navigation Links (Hidden by Default) -->
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li> <!-- Link to Home page -->
-                <li><a href="#">About Me</a></li> <!-- Link to About Me page -->
-                <li><a href="#">Projects</a></li> <!-- Link to Projects page -->
-                <li><a href="#">Resume</a></li> <!-- Link to Resume page -->
-                <li><a href="#">Contact</a></li> <!-- Link to Contact page -->
-            </ul>
-        </nav>
+       
+        <h1>Ron McCune</h1>
+        <h2>Passionate About IT & Cybersecurity</h2>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-        <!-- Resume Introduction Section -->
-        <section class="resume-section">
-            <h2 class="highlight-text"><span class="deep blue-text">My Resume</span></h2> <!-- Section title with styling -->
-            <p>Below is a summary of my skills, experience, and education. You can also download my full resume in PDF format.</p>
-        </section>
+    <!-- Navigation Section -->
+    <nav>
+        <div class="nav-container">
+            <!-- Hamburger Icon -->
+            <div class="hamburger">☰</div>
 
-        <!-- Skills Section -->
-        <section class="resume-skills">
-            <h3><span class="blue-text">💡 Skills & Expertise</span></h3> <!-- Skills section header -->
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+   <main>
+        <section class="resume-section">
+            <h2 class="highlight-text"><span class="deep blue-text">My Resume</span></h2>
+            <p>Below is a summary of my skills, experience, and education. You can also download my full resume in PDF format.</p>
+            
+            <!-- Skills Section -->
+            <h3><span class="blue-text">💡 Skills & Expertise</span></h3>
             <ul>
                 <p>🔹 Web Development: HTML, CSS, JavaScript, Visual Studio Code.</p>
                 <p>🔹 Learning Cybersecurity Fundamentals: Network Security, Ethical Hacking (In Progress).</p>
-                <p>🔹 IT Support & Troubleshooting: Hardware & Software Basics.</p>
+                <p>🔹 Building IT Support & Troubleshooting Skills: Hardware & Software Basics.</p>
                 <p>🔹 Problem Solving & Critical Thinking: Strong analytical skills.</p>
                 <p>🔹 Version Control & Collaboration: GitHub, Agile methodologies.</p>
             </ul>
         </section>
 
-        <!-- Work Experience Section -->
+           <!-- Work Experience -->
         <section class="resume-experience">
-            <h3><span class="red-text">💼 Work Experience</span></h3> <!-- Work experience section header -->
+            <h3><span class="red-text">💼 Work Experience</span></h3>
 
-            <!-- Inventory Specialist Role -->
             <h4>Inventory Specialist - Great Lakes Cheese</h4>
             <p><strong>Dates:</strong> May 2022 – Present</p>
             <ul>
@@ -76,7 +71,6 @@
                 <p>✔ Strengthened problem-solving skills while working with SAP and inventory systems.</p>
             </ul>
 
-            <!-- IT & Cybersecurity Projects -->
             <h4><span class="blue-text">IT & Cybersecurity Projects</span></h4>
             <p><strong>Dates:</strong> Ongoing</p>
             <ul>
@@ -89,15 +83,12 @@
 
         <!-- Education Section -->
         <section class="resume-education">
-            <h3><span class="red-text">🎓 Education</span></h3> <!-- Education section header -->
-
-            <!-- Kent State University -->
+            <h3><span class="red-text">🎓 Education</span></h3>
             <h4>Kent State University - Trumbull Campus</h4>
             <p><strong>Degree:</strong> Bachelor of Science in Information Technology (BSIT)</p>
-            <p><strong>Expected Graduation:</strong> 2028</p>
-            <p>Currently learning the fundamentals of cybersecurity, networking, and IT systems administration.</p>
+            <p><strong>Expected Graduation:</strong> 2028 </p>
+            <p>Currently learning the fundamentals of cybersecurity, networking, and IT systems administration..</p>
 
-            <!-- Relevant Coursework -->
             <h4><span class="blue-text">Relevant Coursework:</span></h4>
             <ul>
                 <p>✔ Visual Basic Programming (IT 11002)</p>
@@ -110,45 +101,27 @@
             </ul>
         </section>
 
-        <!-- Certifications Section -->
-        <section class="resume-certifications">
-            <h3><span class="red-text">📜 Certifications</span></h3> <!-- Certifications section header -->
+           <section class="resume-certifications">
+            <h3><span class="red-text">📜 Certifications</span></h3>
             <ul>
                 <p>✔ CompTIA A+ (In Progress)</p>
                 <p>✔ Self-Learning Cybersecurity & Ethical Hacking Concepts</p>
             </ul>
         </section>
 
-        <!-- Download Resume Section -->
-        <section class="resume-download">
-            <h3><span class="deep blue-text">Download Resume</span></h3> <!-- Resume download section header -->
+            <!-- Download Resume Section -->
+            <h3><span class="deep blue-text">Download Resume</span></h3>
             <p>
-                <a href="ron_mccune_resume.pdf" target="_blank" class="project-link">Download PDF</a> <!-- Resume download link -->
+                <a href="ron_mccune_resume.pdf" target="_blank" class="project-link">Download PDF</a>
             </p>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p> <!-- Copyright notice -->
-        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p> <!-- Contact email -->
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
-
-    <!-- JavaScript to Handle Navigation Toggle -->
- <!-- JavaScript to Handle Navigation Toggle -->
-<script>
-    function toggleMenu() {
-        let navLinks = document.querySelector('.nav-links'); // Selects the navigation list
-        navLinks.classList.toggle('active'); // Adds or removes the "active" class to show/hide menu
-    }
-</script>
-
 
 </body>
 </html>
-
-<!-- 
-   ───── ByteShifter ───── 
-   Crafted with 💻 & ☕ 
-   https://github.com/Rmccune85
--->
