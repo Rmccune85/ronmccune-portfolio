@@ -90,27 +90,50 @@ h2 {
 }
 
 /* Mobile Navigation */
+/* Mobile Navigation Fix */
 @media only screen and (max-width: 767px) {
     .nav-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .hamburger {
         display: block;
         text-align: center;
         margin-bottom: 10px;
+        cursor: pointer;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
+        text-align: center;
+        background: #007bff; /* Matches the nav bar */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        border-top: 2px solid white;
     }
 
     .nav-links.active {
         display: flex;
     }
+
+    .nav-links li {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        display: block;
+        padding: 15px;
+    }
 }
+
 
 /* Main Content Section */
 main {
