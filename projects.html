@@ -8,30 +8,36 @@
 <html lang="en"> <!-- Defines the language of the document for SEO and accessibility -->
 
 <head>
-    <meta charset="UTF-8"> <!-- Defines character encoding for proper text display -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsiveness on mobile devices -->
-    
-    <title>Projects - Ron McCune</title> <!-- Sets the browser tab title -->
+    <title>Ron McCune - Portfolio</title>
+    <!-- Sets the title displayed on the browser tab -->
 
-    <!-- Google Fonts (Rubik for a clean and professional look) -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <!-- Specifies character encoding to support all text formats (UTF-8 is standard) -->
 
-    <!-- External CSS File for styling -->
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website responsive (adjusts to different screen sizes) -->
+
+    <!-- Google Font (Poppins for a clean and modern look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- Links to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <h1>Ron McCune</h1> <!-- Displays the main title -->
-        <h2>My Journey as a BSIT student</h2> <!-- Subtitle providing context -->
-
+        <h1>Ron McCune</h1> <!-- Main title of the page -->
+        <h2>My Journey as a BSIT student</h2> <!-- Subtitle giving more context -->
+</header>
         <!-- Navigation Menu -->
-        <nav>
-            <!-- Menu Button (Hamburger) for mobile navigation -->
-            <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
-
+      
             <!-- Navigation Links (Hidden by Default) -->
+             <div class="nav-container">
+            <!-- Hamburger Icon -->
+            <div class="hamburger">☰</div>
+
+            <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
@@ -39,8 +45,8 @@
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+                 </div>
         </nav>
-    </header>
 
     <!-- Main Content Section -->
     <main class="project-section">
