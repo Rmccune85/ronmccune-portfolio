@@ -117,8 +117,16 @@
         <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
         <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
     </footer>
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector(".hamburger");
+            const navLinks = document.querySelector(".nav-links");
 
-  
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>  
 
 </body>
 </html>
