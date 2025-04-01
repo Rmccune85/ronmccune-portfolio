@@ -1,8 +1,14 @@
 /* 
+   ───── ByteShifter ───── 
+   Crafted with 💻 & ☕ 
+   https://github.com/Rmccune85
+*/
+
+/* 
    Author: Ron McCune
    File: styles.css
-   Date: 03/06/2025
-   Description: Designing for Tablet and Desktop Devices.
+   Date: 03/21/2025
+   Description: Improving the Design of Your Personal Portfolio Website
 */
 
 /* CSS Reset and Global Styles */
@@ -10,6 +16,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header, nav, main, footer, figure, figcaption, section, article, aside {
+    display: block;
 }
 
 body {
@@ -38,6 +48,21 @@ header img.profile-image {
     margin-bottom: 10px;
 }
 
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #f9f9f9;
+    text-shadow: 1px 1px 2px black;
+}
+
 h1 {
     font-size: 36px;
 }
@@ -47,10 +72,29 @@ h2 {
     color: #e6e6e6;
 }
 
+header figure {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+header figure figcaption {
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
 /* NAVIGATION STYLES */
 .nav-container {
     display: flex;
-    justify-content: center; /* Ensures Centering */
+    justify-content: center;
     align-items: center;
     background: #007bff;
     padding: 15px 20px;
@@ -59,15 +103,15 @@ h2 {
 }
 
 /* Navigation Links */
-.nav-links {
+.nav-links, .navBar {
     display: flex;
-    justify-content: center; /* Center Navigation */
+    justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between links */
+    gap: 20px;
     list-style: none;
 }
 
-.nav-links a {
+.nav-links a, .navBar a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -76,7 +120,7 @@ h2 {
     transition: color 0.3s, background-color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .navBar a:hover {
     background-color: #0056b3;
     border-radius: 5px;
 }
@@ -89,52 +133,6 @@ h2 {
     cursor: pointer;
 }
 
-/* Mobile Navigation */
-/* Mobile Navigation Fix */
-@media only screen and (max-width: 767px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hamburger {
-        display: block;
-        text-align: center;
-        margin-bottom: 10px;
-        cursor: pointer;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: #007bff; /* Matches the nav bar */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        padding: 10px 0;
-        border-top: 2px solid white;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .nav-links a {
-        font-size: 20px;
-        display: block;
-        padding: 15px;
-    }
-}
-
-
 /* Main Content Section */
 main {
     max-width: 800px;
@@ -144,6 +142,55 @@ main {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
+}
+
+/* Contact Form Adjustments */
+.contact-form button {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.frame {
+    position: relative;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.frame:hover {
+    opacity: 1;
+    box-shadow: 8px 8px 10px #808080;
+}
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px #000;
 }
 
 /* Section Styles */
@@ -157,7 +204,6 @@ main {
     color: red;
     font-weight: bold;
 }
-
 /* Footer Styles */
 footer {
     text-align: center;
@@ -217,7 +263,6 @@ footer a:hover {
 .project-link:hover {
     color: #0056b3;
 }
-
 /* ─────────── Responsive Media Queries ─────────── */
 
 /* Mobile Styles */
@@ -238,26 +283,53 @@ footer a:hover {
     .project-card {
         max-width: 90%;
     }
+
+    .section-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        margin: 5px 0;
+        font-size: 20px;
+    }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     .nav-container {
-        display: flex;
-        justify-content: center; /* Ensures Centering */
-        align-items: center;
-        width: 100%;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
     }
 
     .nav-links {
-        display: flex;
-        justify-content: center;
+        display: none;
+        flex-direction: column;
         width: 100%;
-        padding: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-links li {
-        margin: 0 12px; /* Adds even spacing between links */
+        margin: 0 12px;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        margin: 5px 0;
+        font-size: 20px;
     }
 }
 
@@ -293,9 +365,190 @@ footer a:hover {
         transform: scale(1.1);
     }
 }
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
-/* 
-   ───── ByteShifter ───── 
-   Crafted with 💻 & ☕ 
-   https://github.com/Rmccune85
-*/
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+table td {
+    background-color: #fff;
+}
+
+/* Responsive Table */
+@media only screen and (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+    table th, table td {
+        padding: 8px;
+    }
+}
+
+/* Contact Form Styling */
+.contact-form {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Form */
+@media only screen and (max-width: 600px) {
+    .contact-form {
+        padding: 15px;
+    }
+
+    .contact-form input, .contact-form textarea, .contact-form button {
+        font-size: 16px;
+    }
+}
+
+/* Improved Header for Mobile */
+header {
+    padding: 15px;
+}
+
+header h1, header h2 {
+    margin: 5px 0;
+}
+
+header img.profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+/* Mobile Navigation Fix */
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #007bff;
+        position: absolute;
+        top: 70px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Improved Header for Mobile */
+header {
+    padding: 15px;
+}
+
+header h1, header h2 {
+    margin: 5px 0;
+}
+
+header img.profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+/* Text Alignment Improvement */
+@media only screen and (max-width: 600px) {
+    .section-title {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
