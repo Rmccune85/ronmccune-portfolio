@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- 
+   ───── ByteShifter ───── 
+   Crafted with 💻 & ☕ 
+   https://github.com/Rmccune85
+-->
+
+<!-- 
+    Author: Ron McCune
+    File: inspiration.html
+    Date: 03/27/2025
+    Description: A new page showcasing motivational quotes and design inspirations, styled with grid, semantic layout, and shadow effects.
+-->
+
+<html lang="en">
+<head>
+    <title>Inspiration - Ron McCune</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <figure>
+            <img src="images/kayaking.jpg" alt="Ron McCune Photo" class="profile-image">
+            <figcaption>
+                <h1>Ron McCune</h1>
+                <h2>Inspiration & Motivation</h2>
+            </figcaption>
+        </figure>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="nav-container">
+        <!-- Hamburger Icon -->
+        <div class="hamburger">☰</div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+			<li><a href="inspiration.html">Inspiration</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           
+        </ul>
+    </nav>
+
+    <!-- Main Content Section with Grid -->
+   
+        <main class="project-section">
+    <section class="project-card">
+        <h3>“Success is the sum of small efforts, repeated day in and day out.”</h3>
+        <p><strong>— Robert Collier</strong></p>
+    </section>
+
+    <section class="project-card">
+        <h3>“Discipline is choosing between what you want now and what you want most.”</h3>
+        <p><strong>— Abraham Lincoln</strong></p>
+    </section>
+
+    <section class="project-card">
+        <h3>“You don’t have to be great to start, but you have to start to be great.”</h3>
+        <p><strong>— Zig Ziglar</strong></p>
+    </section>
+</main>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Ron McCune. All Rights Reserved.</p>
+        <p>Email me at <a href="mailto:mccu31@gmail.com">mccu31@gmail.com</a></p>
+    </footer>
+
+    <!-- Hamburger Script -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    });
+</script>
+
+
+</body>
+</html>
