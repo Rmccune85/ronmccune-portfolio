@@ -552,3 +552,18 @@ header img.profile-image {
         font-size: 14px;
     }
 }
+.linkedin-button {
+  display: inline-block;
+  background-color: #0a66c2;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: #004182;
+}
