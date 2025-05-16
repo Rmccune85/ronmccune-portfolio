@@ -603,6 +603,19 @@ header img.profile-image {
 .resume-button:hover {
   background-color: #5145cd;
 }
+.resume-education ul li {
+  margin-bottom: 6px;
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.resume-education ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0a66c2;
+}
 
 
 
